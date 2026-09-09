@@ -1,3 +1,38 @@
+(function protectSite() {
+    const isFormField = (el) => el && (el.tagName === "INPUT" || el.tagName === "TEXTAREA");
+
+    const block = (event) => {
+        if (isFormField(event.target)) {
+            return;
+        }
+        event.preventDefault();
+    };
+
+    document.addEventListener("contextmenu", block);
+    document.addEventListener("copy", block);
+    document.addEventListener("cut", block);
+    document.addEventListener("paste", block);
+    document.addEventListener("dragstart", block);
+    document.addEventListener("selectstart", block);
+
+    document.addEventListener("keydown", (event) => {
+        const key = event.key.toLowerCase();
+        const blockedCombo =
+            event.ctrlKey && ["c", "x", "u", "s", "p", "a"].includes(key);
+        const blockedInspect =
+            event.key === "F12" ||
+            (event.ctrlKey && event.shiftKey && ["i", "j", "c"].includes(key));
+
+        if (isFormField(event.target) && key !== "u" && event.key !== "F12" && !(event.ctrlKey && event.shiftKey)) {
+            return;
+        }
+
+        if (blockedCombo || blockedInspect) {
+            event.preventDefault();
+        }
+    });
+})();
+
 var typed = new Typed(".text", {
     strings: [
         "Développeuse Fullstack",
