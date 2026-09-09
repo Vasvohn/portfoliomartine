@@ -196,8 +196,17 @@ const menuIcon = document.getElementById("menu-icon");
 const navbar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll(".navbar a");
 
-menuIcon.addEventListener("click", () => {
+menuIcon.addEventListener("click", (event) => {
+    event.stopPropagation();
     navbar.classList.toggle("active");
+});
+
+navbar.addEventListener("click", (event) => {
+    event.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+    navbar.classList.remove("active");
 });
 
 navLinks.forEach((link) => {
