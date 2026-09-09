@@ -271,6 +271,14 @@ window.addEventListener("scroll", () => {
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 
+function showThanks() {
+    form.hidden = true;
+    status.hidden = false;
+    status.classList.remove("is-error");
+    status.classList.add("is-thanks");
+    status.textContent = translations[currentLang].contactStatus;
+}
+
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const name = form.name.value.trim();
@@ -303,13 +311,11 @@ form.addEventListener("submit", (event) => {
     }
 
     document.getElementById("mail-subject").value = `Portfolio — ${subject}`;
+    sessionStorage.setItem("contact-sent", "1");
+    showThanks();
     form.submit();
 });
 
-if (new URLSearchParams(window.location.search).get("sent") === "1") {
-    form.hidden = true;
-    status.hidden = false;
-    status.classList.remove("is-error");
-    status.classList.add("is-thanks");
-    status.textContent = translations[currentLang].contactStatus;
+if (sessionStorage.getItem("contact-sent") === "1" || new URLSearchParams(window.location.search).get("sent") === "1") {
+    showThanks();
 }
