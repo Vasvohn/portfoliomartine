@@ -168,13 +168,25 @@
 
     <section class="contact" id="contact">
         <h2 class="heading" data-i18n-html="contactTitle">Me <span>contacter</span></h2>
-        <form id="contact-form">
+        <form id="contact-form" novalidate>
             <div class="input-box">
-                <input type="text" name="name" data-i18n-placeholder="phName" placeholder="Votre nom" required>
-                <input type="email" name="email" data-i18n-placeholder="phEmail" placeholder="Votre email" required>
+                <label>
+                    <span data-i18n="labelName">Nom *</span>
+                    <input type="text" name="name" data-i18n-placeholder="phName" placeholder="Votre nom *" required minlength="2" autocomplete="name">
+                </label>
+                <label>
+                    <span data-i18n="labelEmail">Adresse e-mail *</span>
+                    <input type="email" name="email" data-i18n-placeholder="phEmail" placeholder="Votre adresse e-mail *" required autocomplete="email">
+                </label>
             </div>
-            <input type="text" name="subject" data-i18n-placeholder="phSubject" placeholder="Sujet" required>
-            <textarea name="message" rows="8" data-i18n-placeholder="phMessage" placeholder="Votre message" required></textarea>
+            <label>
+                <span data-i18n="labelSubject">Sujet *</span>
+                <input type="text" name="subject" data-i18n-placeholder="phSubject" placeholder="Sujet *" required minlength="2">
+            </label>
+            <label>
+                <span data-i18n="labelMessage">Message *</span>
+                <textarea name="message" rows="8" data-i18n-placeholder="phMessage" placeholder="Votre message *" required minlength="10"></textarea>
+            </label>
             <button type="submit" class="btn-box" data-i18n="contactSend">Envoyer</button>
         </form>
         <p class="form-status" id="form-status" hidden></p>

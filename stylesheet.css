@@ -400,6 +400,15 @@ section {
     gap: 16px;
 }
 
+.contact label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-soft);
+}
+
 .input-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -415,6 +424,7 @@ section {
     background: #22103a;
     color: #fff;
     font-size: 16px;
+    font-weight: 400;
     outline: none;
 }
 
@@ -422,6 +432,12 @@ section {
 .contact textarea:focus {
     border-color: var(--accent);
     box-shadow: 0 0 12px rgba(176, 38, 255, 0.35);
+}
+
+.contact input.is-invalid,
+.contact textarea.is-invalid {
+    border-color: #ff6b9d;
+    box-shadow: 0 0 10px rgba(255, 107, 157, 0.35);
 }
 
 .contact .btn-box {
@@ -435,6 +451,10 @@ section {
     text-align: center;
     margin-top: 18px;
     color: var(--accent-soft);
+}
+
+.form-status.is-error {
+    color: #ff8fb3;
 }
 
 .footer {
@@ -542,9 +562,9 @@ section {
         right: 0;
         left: 0;
         width: 100%;
-        background: rgba(176, 38, 255, 0.12);
-        backdrop-filter: blur(8px);
-        border-bottom: 1px solid rgba(214, 164, 255, 0.25);
+        background: rgba(176, 38, 255, 0.04);
+        backdrop-filter: blur(3px);
+        border-bottom: 1px solid rgba(214, 164, 255, 0.12);
         display: none;
         flex-direction: column;
         padding: 16px 10%;

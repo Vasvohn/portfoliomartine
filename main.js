@@ -73,11 +73,17 @@ const translations = {
         path4Title: "Autoentrepreneur",
         path4Text: "Activité indépendante : sites, applications et accompagnement digital.",
         contactTitle: "Me <span>contacter</span>",
-        phName: "Votre nom",
-        phEmail: "Votre email",
-        phSubject: "Sujet",
-        phMessage: "Votre message",
+        labelName: "Nom *",
+        labelEmail: "Adresse e-mail *",
+        labelSubject: "Sujet *",
+        labelMessage: "Message *",
+        phName: "Votre nom *",
+        phEmail: "Votre adresse e-mail *",
+        phSubject: "Sujet *",
+        phMessage: "Votre message *",
         contactSend: "Envoyer",
+        contactRequired: "Tous les champs sont obligatoires : nom, adresse e-mail, sujet et message.",
+        contactInvalidEmail: "Veuillez entrer une adresse e-mail valide.",
         contactStatus: "Votre application mail s’ouvre pour envoyer le message à asmartine@yahoo.com.",
         footerRights: "Tous droits réservés.",
         backTop: "Retour en haut",
@@ -123,11 +129,17 @@ const translations = {
         path4Title: "Self-employed",
         path4Text: "Independent activity: websites, applications and digital support.",
         contactTitle: "Contact <span>me</span>",
-        phName: "Your name",
-        phEmail: "Your email",
-        phSubject: "Subject",
-        phMessage: "Your message",
+        labelName: "Name *",
+        labelEmail: "Email address *",
+        labelSubject: "Subject *",
+        labelMessage: "Message *",
+        phName: "Your name *",
+        phEmail: "Your email address *",
+        phSubject: "Subject *",
+        phMessage: "Your message *",
         contactSend: "Send",
+        contactRequired: "All fields are required: name, email address, subject and message.",
+        contactInvalidEmail: "Please enter a valid email address.",
         contactStatus: "Your mail app will open to send the message to asmartine@yahoo.com.",
         footerRights: "All rights reserved.",
         backTop: "Back to top",
@@ -246,10 +258,35 @@ form.addEventListener("submit", (event) => {
     const email = form.email.value.trim();
     const subject = form.subject.value.trim();
     const message = form.message.value.trim();
-    const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\n${message}`);
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    [form.name, form.email, form.subject, form.message].forEach((field) => {
+        field.classList.remove("is-invalid");
+    });
+
+    if (!name || !email || !subject || !message) {
+        if (!name) form.name.classList.add("is-invalid");
+        if (!email) form.email.classList.add("is-invalid");
+        if (!subject) form.subject.classList.add("is-invalid");
+        if (!message) form.message.classList.add("is-invalid");
+        status.hidden = false;
+        status.classList.add("is-error");
+        status.textContent = translations[currentLang].contactRequired;
+        return;
+    }
+
+    if (!emailPattern.test(email)) {
+        form.email.classList.add("is-invalid");
+        status.hidden = false;
+        status.classList.add("is-error");
+        status.textContent = translations[currentLang].contactInvalidEmail;
+        return;
+    }
+
+    const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\n${message}`);
     window.location.href = `mailto:asmartine@yahoo.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 
+    status.classList.remove("is-error");
     status.hidden = false;
     status.textContent = translations[currentLang].contactStatus;
     form.reset();
