@@ -8,14 +8,14 @@
 
 :root {
     --accent: #c5a059;
-    --amethyst: #6e8b8e;
-    --accent-soft: #6e8b8e;
-    --bg: #f7f4ee;
-    --bg-alt: #e8eeef;
+    --amethyst: #7a9a9c;
+    --accent-soft: #7a9a9c;
+    --bg: #f6f3ec;
+    --bg-alt: #e7eeef;
     --card: #ffffff;
-    --text: #1b2631;
-    --dark: #1b2631;
-    --nav-glass: rgba(247, 244, 238, 0.92);
+    --text: #1c2833;
+    --dark: #1c2833;
+    --nav-glass: rgba(246, 243, 236, 0.94);
 }
 
 html, body {
@@ -87,17 +87,19 @@ input, textarea {
     align-items: center;
     text-decoration: none;
     cursor: pointer;
-    background: #fff;
-    border-radius: 14px;
-    padding: 4px 8px;
+    background: transparent;
+    padding: 0;
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
 
 .logo img {
-    height: 62px;
+    height: 40px;
     width: auto;
+    max-width: 140px;
     display: block;
+    object-fit: contain;
+    background: transparent;
 }
 
 #menu-icon {
@@ -628,7 +630,8 @@ section {
     }
 
     .logo img {
-        height: 48px;
+        height: 34px;
+        max-width: 110px;
     }
 
     #menu-icon {
