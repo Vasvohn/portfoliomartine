@@ -319,3 +319,9 @@ form.addEventListener("submit", (event) => {
 if (sessionStorage.getItem("contact-sent") === "1" || new URLSearchParams(window.location.search).get("sent") === "1") {
     showThanks();
 }
+
+document.querySelectorAll(".home-img img, .about-img img").forEach((photo) => {
+    photo.addEventListener("click", () => {
+        photo.classList.toggle("is-shadowed");
+    });
+});
