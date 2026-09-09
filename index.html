@@ -7,7 +7,7 @@
     <title>Asiata Martine | Portfolio</title>
     <meta name="description" content="Portfolio d'Asiata Martine, développeuse fullstack, front-end, back-end et web designer.">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com https://unpkg.com; script-src 'self' https://unpkg.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com https://unpkg.com; script-src 'self' https://unpkg.com; connect-src 'self' https://formsubmit.co; object-src 'none'; base-uri 'self'; form-action 'self' mailto: https://formsubmit.co;">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -168,7 +168,7 @@
 
     <section class="contact" id="contact">
         <h2 class="heading" data-i18n-html="contactTitle">Me <span>contacter</span></h2>
-        <form id="contact-form" novalidate>
+        <form id="contact-form" action="https://formsubmit.co/asmartine@yahoo.com" method="POST" novalidate>
             <div class="input-box">
                 <label>
                     <span data-i18n="labelName">Nom *</span>

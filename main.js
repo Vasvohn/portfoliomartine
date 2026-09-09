@@ -84,7 +84,8 @@ const translations = {
         contactSend: "Envoyer",
         contactRequired: "Tous les champs sont obligatoires : nom, adresse e-mail, sujet et message.",
         contactInvalidEmail: "Veuillez entrer une adresse e-mail valide.",
-        contactStatus: "Votre application mail s’ouvre pour envoyer le message à asmartine@yahoo.com.",
+        contactStatus: "Message envoyé à asmartine@yahoo.com.",
+        contactError: "L’envoi a échoué. Réessayez, ou écrivez directement à asmartine@yahoo.com.",
         footerRights: "Tous droits réservés.",
         backTop: "Retour en haut",
         pageDesc: "Portfolio d'Asiata Martine, développeuse fullstack, front-end, back-end et web designer.",
@@ -140,7 +141,8 @@ const translations = {
         contactSend: "Send",
         contactRequired: "All fields are required: name, email address, subject and message.",
         contactInvalidEmail: "Please enter a valid email address.",
-        contactStatus: "Your mail app will open to send the message to asmartine@yahoo.com.",
+        contactStatus: "Message sent to asmartine@yahoo.com.",
+        contactError: "Sending failed. Please try again, or email asmartine@yahoo.com directly.",
         footerRights: "All rights reserved.",
         backTop: "Back to top",
         pageDesc: "Portfolio of Asiata Martine, full-stack, front-end and back-end developer and web designer.",
@@ -264,7 +266,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const name = form.name.value.trim();
     const email = form.email.value.trim();
@@ -295,11 +297,32 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:asmartine@yahoo.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    try {
+        const response = await fetch("https://formsubmit.co/ajax/asmartine@yahoo.com", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify({
+                name,
+                email,
+                _subject: subject,
+                message
+            })
+        });
 
-    status.classList.remove("is-error");
-    status.hidden = false;
-    status.textContent = translations[currentLang].contactStatus;
-    form.reset();
+        if (!response.ok) {
+            throw new Error("send-failed");
+        }
+
+        status.classList.remove("is-error");
+        status.hidden = false;
+        status.textContent = translations[currentLang].contactStatus;
+        form.reset();
+    } catch (error) {
+        status.hidden = false;
+        status.classList.add("is-error");
+        status.textContent = translations[currentLang].contactError;
+    }
 });
