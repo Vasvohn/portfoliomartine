@@ -92,9 +92,15 @@ input, textarea {
 
 #menu-icon {
     font-size: 2.2rem;
-    color: #fff;
+    color: var(--accent-soft);
     display: none;
     cursor: pointer;
+    background: var(--nav-glass);
+    border: 1px solid rgba(214, 164, 255, 0.35);
+    border-radius: 8px;
+    padding: 4px 6px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar a {
@@ -583,6 +589,7 @@ section {
         margin: 12px 0;
         opacity: 1;
         animation: none;
+        color: var(--accent-soft);
     }
 
     .input-box {
