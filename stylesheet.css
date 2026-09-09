@@ -12,7 +12,7 @@
     --bg: #12081f;
     --bg-alt: #1a0b2e;
     --text: #ededed;
-    --dark: #1a0b2e;
+    --nav-glass: rgba(176, 38, 255, 0.28);
 }
 
 html, body {
@@ -40,19 +40,21 @@ input, textarea {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: rgba(176, 38, 255, 0.28);
+    background: var(--nav-glass);
     border-bottom: 1px solid rgba(214, 164, 255, 0.35);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .header-right {
     display: flex;
     align-items: center;
     gap: 18px;
+    margin-left: auto;
 }
 
 .lang-switch {
@@ -557,18 +559,20 @@ section {
     }
 
     .navbar {
-        position: absolute;
-        top: 100%;
-        right: 0;
+        position: fixed;
+        top: 72px;
         left: 0;
+        right: 0;
         width: 100%;
-        background: rgba(176, 38, 255, 0.28);
+        margin: 0;
+        background: var(--nav-glass);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(214, 164, 255, 0.35);
         display: none;
         flex-direction: column;
         padding: 22px 10%;
+        z-index: 99;
     }
 
     .navbar.active {

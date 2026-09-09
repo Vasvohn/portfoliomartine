@@ -208,9 +208,21 @@ const menuIcon = document.getElementById("menu-icon");
 const navbar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll(".navbar a");
 
+const header = document.querySelector(".header");
+
+function closeMenu() {
+    navbar.classList.remove("active");
+    header.classList.remove("menu-open");
+    menuIcon.classList.remove("bx-x");
+    menuIcon.classList.add("bx-menu");
+}
+
 menuIcon.addEventListener("click", (event) => {
     event.stopPropagation();
     navbar.classList.toggle("active");
+    header.classList.toggle("menu-open", navbar.classList.contains("active"));
+    menuIcon.classList.toggle("bx-x", navbar.classList.contains("active"));
+    menuIcon.classList.toggle("bx-menu", !navbar.classList.contains("active"));
 });
 
 navbar.addEventListener("click", (event) => {
@@ -218,12 +230,12 @@ navbar.addEventListener("click", (event) => {
 });
 
 document.addEventListener("click", () => {
-    navbar.classList.remove("active");
+    closeMenu();
 });
 
 navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-        navbar.classList.remove("active");
+        closeMenu();
         navLinks.forEach((item) => item.classList.remove("active"));
         link.classList.add("active");
     });
