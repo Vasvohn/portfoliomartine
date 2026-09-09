@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asiata Martine | Portfolio</title>
+    <meta name="description" content="Portfolio d'Asiata Martine, développeuse fullstack, front-end, back-end et web designer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">Portfolio</a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#skills" style="--i:3">Skill</a>
+            <a href="#services" style="--i:4">Services</a>
+            <a href="#contact" style="--i:5">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Bonjour, je suis</h3>
+            <h1>Asiata Martine</h1>
+            <h3>Et je suis <span class="text"></span></h3>
+            <p>
+                Développeuse fullstack et web designer. Après plusieurs années dans la santé,
+                je me consacre depuis 2023 au développement web, en autoentrepreneur.
+            </p>
+            <div class="home-sci">
+                <a href="https://github.com/Vasvohn" target="_blank" rel="noopener noreferrer" style="--i:7" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                <a href="#contact" style="--i:8" aria-label="Contact"><i class="bx bx-envelope"></i></a>
+            </div>
+            <a href="#about" class="btn-box">En savoir plus</a>
+        </div>
+        <div class="home-img">
+            <img src="images/profile.jpg" alt="Portrait d'Asiata Martine">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/profile.jpg" alt="Asiata Martine">
+        </div>
+        <div class="about-text">
+            <h2>À propos de <span>moi</span></h2>
+            <h4>Développeuse fullstack &amp; web designer</h4>
+            <p>
+                J’ai travaillé dans le secteur de la santé depuis 2018. En 2023, je me suis
+                orientée vers le développement web. J’ai participé à la piscine de Zone01
+                en février et mars 2023, une expérience intensive qui a confirmé mon choix
+                de reconversion.
+            </p>
+            <p>
+                Aujourd’hui, je suis autoentrepreneur. J’accompagne mes clients sur le
+                front-end, le back-end et le design d’interfaces, avec une approche
+                claire, soignée et centrée sur l’utilisateur.
+            </p>
+            <a href="#contact" class="btn-box">Me contacter</a>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">Mes <span>compétences</span></h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="bx bxl-html5"></i>
+                <h3>HTML</h3>
+            </div>
+            <div class="skill-box">
+                <i class="bx bxl-css3"></i>
+                <h3>CSS</h3>
+            </div>
+            <div class="skill-box">
+                <i class="bx bxl-javascript"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-box">
+                <i class="bx bxl-php"></i>
+                <h3>PHP / MySQL</h3>
+            </div>
+            <div class="skill-box">
+                <i class="bx bxl-python"></i>
+                <h3>Python</h3>
+            </div>
+            <div class="skill-box">
+                <i class="bx bxl-bootstrap"></i>
+                <h3>Bootstrap</h3>
+            </div>
+            <div class="skill-box">
+                <i class="bx bxl-angular"></i>
+                <h3>Angular</h3>
+            </div>
+            <div class="skill-box">
+                <i class="bx bx-palette"></i>
+                <h3>Web Design</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="heading">Mes <span>services</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class="bx bx-code-alt"></i>
+                <h3>Développeuse fullstack</h3>
+                <p>Conception et réalisation d’applications web de bout en bout, de l’interface à la base de données.</p>
+            </div>
+            <div class="services-box">
+                <i class="bx bx-laptop"></i>
+                <h3>Front-end</h3>
+                <p>Interfaces responsives, accessibles et modernes avec HTML, CSS, JavaScript, Bootstrap et Angular.</p>
+            </div>
+            <div class="services-box">
+                <i class="bx bx-server"></i>
+                <h3>Back-end</h3>
+                <p>Logique métier, API et bases de données avec PHP/MySQL et Python, pour des sites fiables et maintenables.</p>
+            </div>
+            <div class="services-box">
+                <i class="bx bx-brush"></i>
+                <h3>Web designer</h3>
+                <p>Identité visuelle, mise en page et expérience utilisateur pour un site clair, professionnel et mémorable.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline" id="parcours">
+        <h2 class="heading">Mon <span>parcours</span></h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <span>2018</span>
+                <h3>Santé</h3>
+                <p>Début de mon parcours professionnel dans le secteur de la santé.</p>
+            </div>
+            <div class="timeline-item">
+                <span>Février – mars 2023</span>
+                <h3>Piscine Zone01</h3>
+                <p>Participation à la piscine de Zone01, immersion intensive dans le développement.</p>
+            </div>
+            <div class="timeline-item">
+                <span>Depuis 2023</span>
+                <h3>Développement web</h3>
+                <p>Reconversion vers le développement web, le fullstack et le web design.</p>
+            </div>
+            <div class="timeline-item">
+                <span>Aujourd’hui</span>
+                <h3>Autoentrepreneur</h3>
+                <p>Activité indépendante : sites, applications et accompagnement digital.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Me <span>contacter</span></h2>
+        <form id="contact-form">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+            </div>
+            <input type="text" name="subject" placeholder="Sujet" required>
+            <textarea name="message" rows="8" placeholder="Votre message" required></textarea>
+            <button type="submit" class="btn-box">Envoyer</button>
+        </form>
+        <p class="form-status" id="form-status" hidden></p>
+    </section>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Asiata Martine. Tous droits réservés.</p>
+        <a href="#home" class="footer-icon" aria-label="Retour en haut"><i class="bx bx-up-arrow-alt"></i></a>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
