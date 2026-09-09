@@ -48,6 +48,35 @@ input, textarea {
     backdrop-filter: blur(8px);
 }
 
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.lang-switch {
+    display: flex;
+    gap: 6px;
+    z-index: 2;
+}
+
+.lang-switch button {
+    min-width: 42px;
+    padding: 6px 10px;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    background: transparent;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.lang-switch button.active {
+    background: var(--accent);
+    color: var(--dark);
+}
+
 .logo {
     font-size: 25px;
     color: #fff;
@@ -87,22 +116,15 @@ input, textarea {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: url("images/home-bg.png") no-repeat;
-    background-size: cover;
-    background-position: center;
+    background:
+        radial-gradient(circle at 78% 42%, rgba(176, 38, 255, 0.28), transparent 32%),
+        radial-gradient(circle at 12% 80%, rgba(88, 28, 135, 0.45), transparent 40%),
+        linear-gradient(135deg, #12081f 0%, #1a0b2e 55%, #2a1148 100%);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 90px 10% 40px;
     gap: 40px;
-}
-
-.home::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(18, 8, 31, 0.78) 0%, rgba(26, 11, 46, 0.45) 70%, rgba(176, 38, 255, 0.18) 100%);
-    pointer-events: none;
 }
 
 .home-content,
@@ -504,6 +526,7 @@ section {
     .navbar {
         position: absolute;
         top: 100%;
+        right: 0;
         left: 0;
         width: 100%;
         background: #1a0b2e;
