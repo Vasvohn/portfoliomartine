@@ -52,7 +52,15 @@ const status = document.getElementById("form-status");
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value.trim();
+    const message = form.message.value.trim();
+    const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\n${message}`);
+
+    window.location.href = `mailto:asmartine@yahoo.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
     status.hidden = false;
-    status.textContent = "Merci pour votre message. Je vous répondrai dès que possible.";
+    status.textContent = "Votre application mail s’ouvre pour envoyer le message à asmartine@yahoo.com.";
     form.reset();
 });
