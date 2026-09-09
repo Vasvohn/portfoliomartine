@@ -168,7 +168,12 @@
 
     <section class="contact" id="contact">
         <h2 class="heading" data-i18n-html="contactTitle">Me <span>contacter</span></h2>
-        <form id="contact-form" action="https://formsubmit.co/asmartine@yahoo.com" method="POST" novalidate>
+        <form id="contact-form" action="https://formsubmit.co/asmartine@yahoo.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://vasvohn.github.io/portfoliomartine/?sent=1#contact">
+            <input type="hidden" name="_subject" id="mail-subject" value="Message depuis le portfolio">
+            <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
             <div class="input-box">
                 <label>
                     <span data-i18n="labelName">Nom *</span>

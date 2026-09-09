@@ -455,6 +455,14 @@ section {
     align-self: center;
 }
 
+.honey {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
 .form-status {
     text-align: center;
     margin-top: 18px;

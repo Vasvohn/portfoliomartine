@@ -85,6 +85,7 @@ const translations = {
         contactRequired: "Tous les champs sont obligatoires : nom, adresse e-mail, sujet et message.",
         contactInvalidEmail: "Veuillez entrer une adresse e-mail valide.",
         contactStatus: "Message envoyé à asmartine@yahoo.com.",
+        contactSending: "Envoi du message vers asmartine@yahoo.com…",
         contactError: "L’envoi a échoué. Réessayez, ou écrivez directement à asmartine@yahoo.com.",
         footerRights: "Tous droits réservés.",
         backTop: "Retour en haut",
@@ -142,6 +143,7 @@ const translations = {
         contactRequired: "All fields are required: name, email address, subject and message.",
         contactInvalidEmail: "Please enter a valid email address.",
         contactStatus: "Message sent to asmartine@yahoo.com.",
+        contactSending: "Sending the message to asmartine@yahoo.com…",
         contactError: "Sending failed. Please try again, or email asmartine@yahoo.com directly.",
         footerRights: "All rights reserved.",
         backTop: "Back to top",
@@ -266,7 +268,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 
-form.addEventListener("submit", async (event) => {
+form.addEventListener("submit", (event) => {
     event.preventDefault();
     const name = form.name.value.trim();
     const email = form.email.value.trim();
@@ -297,32 +299,15 @@ form.addEventListener("submit", async (event) => {
         return;
     }
 
-    try {
-        const response = await fetch("https://formsubmit.co/ajax/asmartine@yahoo.com", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json"
-            },
-            body: JSON.stringify({
-                name,
-                email,
-                _subject: subject,
-                message
-            })
-        });
-
-        if (!response.ok) {
-            throw new Error("send-failed");
-        }
-
-        status.classList.remove("is-error");
-        status.hidden = false;
-        status.textContent = translations[currentLang].contactStatus;
-        form.reset();
-    } catch (error) {
-        status.hidden = false;
-        status.classList.add("is-error");
-        status.textContent = translations[currentLang].contactError;
-    }
+    document.getElementById("mail-subject").value = `Portfolio — ${subject}`;
+    status.hidden = false;
+    status.classList.remove("is-error");
+    status.textContent = translations[currentLang].contactSending;
+    form.submit();
 });
+
+if (new URLSearchParams(window.location.search).get("sent") === "1") {
+    status.hidden = false;
+    status.classList.remove("is-error");
+    status.textContent = translations[currentLang].contactStatus;
+}
