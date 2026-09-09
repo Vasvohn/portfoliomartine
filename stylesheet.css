@@ -116,15 +116,27 @@ input, textarea {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background:
-        radial-gradient(circle at 78% 42%, rgba(176, 38, 255, 0.28), transparent 32%),
-        radial-gradient(circle at 12% 80%, rgba(88, 28, 135, 0.45), transparent 40%),
-        linear-gradient(135deg, #12081f 0%, #1a0b2e 55%, #2a1148 100%);
+    background: url("images/profile.jpg") no-repeat;
+    background-size: cover;
+    background-position: center 18%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 90px 10% 40px;
     gap: 40px;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(18, 8, 31, 0.9) 0%,
+        rgba(18, 8, 31, 0.72) 42%,
+        rgba(26, 11, 46, 0.38) 100%
+    );
+    pointer-events: none;
 }
 
 .home-content,
