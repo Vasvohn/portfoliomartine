@@ -469,6 +469,16 @@ section {
     color: var(--accent-soft);
 }
 
+.form-status.is-thanks {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f3e8ff;
+    padding: 24px 20px;
+    border: 1px solid rgba(176, 38, 255, 0.45);
+    border-radius: 12px;
+    background: rgba(176, 38, 255, 0.18);
+}
+
 .form-status.is-error {
     color: #ff8fb3;
 }

@@ -84,9 +84,9 @@ const translations = {
         contactSend: "Envoyer",
         contactRequired: "Tous les champs sont obligatoires : nom, adresse e-mail, sujet et message.",
         contactInvalidEmail: "Veuillez entrer une adresse e-mail valide.",
-        contactStatus: "Message envoyé à asmartine@yahoo.com.",
-        contactSending: "Envoi du message vers asmartine@yahoo.com…",
-        contactError: "L’envoi a échoué. Réessayez, ou écrivez directement à asmartine@yahoo.com.",
+        contactStatus: "Merci pour votre message. Je vous répondrai dès que possible.",
+        contactSending: "Envoi en cours…",
+        contactError: "L’envoi a échoué. Veuillez réessayer.",
         footerRights: "Tous droits réservés.",
         backTop: "Retour en haut",
         pageDesc: "Portfolio d'Asiata Martine, développeuse fullstack, front-end, back-end et web designer.",
@@ -142,9 +142,9 @@ const translations = {
         contactSend: "Send",
         contactRequired: "All fields are required: name, email address, subject and message.",
         contactInvalidEmail: "Please enter a valid email address.",
-        contactStatus: "Message sent to asmartine@yahoo.com.",
-        contactSending: "Sending the message to asmartine@yahoo.com…",
-        contactError: "Sending failed. Please try again, or email asmartine@yahoo.com directly.",
+        contactStatus: "Thank you for your message. I will get back to you as soon as possible.",
+        contactSending: "Sending…",
+        contactError: "Sending failed. Please try again.",
         footerRights: "All rights reserved.",
         backTop: "Back to top",
         pageDesc: "Portfolio of Asiata Martine, full-stack, front-end and back-end developer and web designer.",
@@ -200,6 +200,11 @@ function setLanguage(lang) {
     });
 
     startTyped(lang);
+
+    const thanks = document.getElementById("form-status");
+    if (thanks && thanks.classList.contains("is-thanks")) {
+        thanks.textContent = t.contactStatus;
+    }
 }
 
 document.querySelectorAll(".lang-switch button").forEach((btn) => {
@@ -307,7 +312,9 @@ form.addEventListener("submit", (event) => {
 });
 
 if (new URLSearchParams(window.location.search).get("sent") === "1") {
+    form.hidden = true;
     status.hidden = false;
     status.classList.remove("is-error");
+    status.classList.add("is-thanks");
     status.textContent = translations[currentLang].contactStatus;
 }
