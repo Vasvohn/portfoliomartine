@@ -268,8 +268,6 @@ window.addEventListener("scroll", () => {
     });
 });
 
-document.getElementById("year").textContent = new Date().getFullYear();
-
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 
@@ -305,9 +303,6 @@ form.addEventListener("submit", (event) => {
     }
 
     document.getElementById("mail-subject").value = `Portfolio — ${subject}`;
-    status.hidden = false;
-    status.classList.remove("is-error");
-    status.textContent = translations[currentLang].contactSending;
     form.submit();
 });
 
