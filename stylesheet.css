@@ -40,12 +40,13 @@ input, textarea {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: rgba(18, 8, 31, 0.92);
+    background: rgba(176, 38, 255, 0.28);
+    border-bottom: 1px solid rgba(214, 164, 255, 0.35);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
 }
 
 .header-right {
@@ -118,7 +119,7 @@ input, textarea {
     min-height: 100vh;
     background: url("images/profile.jpg") no-repeat;
     background-size: cover;
-    background-position: center 18%;
+    background-position: center top;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -132,9 +133,9 @@ input, textarea {
     inset: 0;
     background: linear-gradient(
         90deg,
-        rgba(18, 8, 31, 0.9) 0%,
-        rgba(18, 8, 31, 0.72) 42%,
-        rgba(26, 11, 46, 0.38) 100%
+        rgba(18, 8, 31, 0.72) 0%,
+        rgba(26, 11, 46, 0.42) 45%,
+        rgba(176, 38, 255, 0.18) 100%
     );
     pointer-events: none;
 }
@@ -541,7 +542,8 @@ section {
         right: 0;
         left: 0;
         width: 100%;
-        background: #1a0b2e;
+        background: rgba(176, 38, 255, 0.35);
+        backdrop-filter: blur(12px);
         display: none;
         flex-direction: column;
         padding: 16px 10%;
