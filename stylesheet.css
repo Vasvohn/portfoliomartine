@@ -560,24 +560,42 @@ section {
 }
 
 @media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        row-gap: 0;
+        padding: 12px 8%;
+        align-items: center;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .header-right {
+        order: 2;
+    }
+
     #menu-icon {
         display: block;
     }
 
     .navbar {
-        position: fixed;
-        top: 72px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        margin: 0;
+        order: 3;
+        position: static;
+        top: auto;
+        left: auto;
+        right: auto;
+        display: none;
+        flex-basis: 100%;
+        width: calc(100% + 16%);
+        margin: 0 -8% -12px;
+        padding: 4px 8% 14px;
         background: var(--nav-glass);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(214, 164, 255, 0.35);
-        display: none;
+        border-top: none;
         flex-direction: column;
-        padding: 22px 10%;
         z-index: 99;
     }
 
