@@ -680,3 +680,57 @@ section {
         font-size: 32px;
     }
 }
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1.8s ease, transform 1.8s ease;
+}
+
+.reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal .skill-box,
+.reveal .services-box,
+.reveal .timeline-item {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.reveal.in-view .skill-box,
+.reveal.in-view .services-box,
+.reveal.in-view .timeline-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal.in-view .skill-box:nth-child(1),
+.reveal.in-view .services-box:nth-child(1),
+.reveal.in-view .timeline-item:nth-child(1) { transition-delay: 0.1s; }
+.reveal.in-view .skill-box:nth-child(2),
+.reveal.in-view .services-box:nth-child(2),
+.reveal.in-view .timeline-item:nth-child(2) { transition-delay: 0.25s; }
+.reveal.in-view .skill-box:nth-child(3),
+.reveal.in-view .services-box:nth-child(3),
+.reveal.in-view .timeline-item:nth-child(3) { transition-delay: 0.4s; }
+.reveal.in-view .skill-box:nth-child(4),
+.reveal.in-view .services-box:nth-child(4),
+.reveal.in-view .timeline-item:nth-child(4) { transition-delay: 0.55s; }
+.reveal.in-view .skill-box:nth-child(5) { transition-delay: 0.7s; }
+.reveal.in-view .skill-box:nth-child(6) { transition-delay: 0.85s; }
+.reveal.in-view .skill-box:nth-child(7) { transition-delay: 1s; }
+.reveal.in-view .skill-box:nth-child(8) { transition-delay: 1.15s; }
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal .skill-box,
+    .reveal .services-box,
+    .reveal .timeline-item {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

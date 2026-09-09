@@ -325,3 +325,20 @@ document.querySelectorAll(".home-img img, .about-img img").forEach((photo) => {
         photo.classList.toggle("is-shadowed");
     });
 });
+
+const revealBlocks = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("in-view");
+                }
+            });
+        },
+        { threshold: 0.18, rootMargin: "0px 0px -40px 0px" }
+    );
+    revealBlocks.forEach((block) => revealObserver.observe(block));
+} else {
+    revealBlocks.forEach((block) => block.classList.add("in-view"));
+}
