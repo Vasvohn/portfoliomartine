@@ -562,13 +562,13 @@ section {
         right: 0;
         left: 0;
         width: 100%;
-        background: rgba(176, 38, 255, 0.08);
+        background: rgba(176, 38, 255, 0.42);
         backdrop-filter: blur(18px);
         -webkit-backdrop-filter: blur(18px);
-        border-bottom: 1px solid rgba(214, 164, 255, 0.2);
+        border-bottom: 1px solid rgba(214, 164, 255, 0.35);
         display: none;
         flex-direction: column;
-        padding: 16px 10%;
+        padding: 22px 10%;
     }
 
     .navbar.active {
