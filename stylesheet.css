@@ -7,15 +7,15 @@
 }
 
 :root {
-    --accent: #c5a059;
-    --amethyst: #7a9a9c;
-    --accent-soft: #7a9a9c;
-    --bg: #f6f3ec;
-    --bg-alt: #e7eeef;
-    --card: #ffffff;
-    --text: #1c2833;
-    --dark: #1c2833;
-    --nav-glass: rgba(246, 243, 236, 0.94);
+    --accent: #b026ff;
+    --amethyst: #9966cc;
+    --accent-soft: #d6a4ff;
+    --bg: #12081f;
+    --bg-alt: #1a0b2e;
+    --card: #22103a;
+    --text: #ededed;
+    --dark: #1a0b2e;
+    --nav-glass: rgba(176, 38, 255, 0.28);
 }
 
 html, body {
@@ -44,7 +44,7 @@ input, textarea {
     width: 100%;
     padding: 10px 8%;
     background: var(--nav-glass);
-    border-bottom: 1px solid rgba(197, 160, 89, 0.5);
+    border-bottom: 1px solid rgba(176, 38, 255, 0.35);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,7 +72,7 @@ input, textarea {
     border: 1px solid var(--accent);
     border-radius: 20px;
     background: transparent;
-    color: var(--text);
+    color: #fff;
     font-weight: 600;
     cursor: pointer;
 }
@@ -83,8 +83,11 @@ input, textarea {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+    font-family: "Great Vibes", cursive;
+    font-size: 34px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 1px;
     text-decoration: none;
     cursor: pointer;
     background: transparent;
@@ -94,21 +97,16 @@ input, textarea {
 }
 
 .logo img {
-    height: 40px;
-    width: auto;
-    max-width: 140px;
-    display: block;
-    object-fit: contain;
-    background: transparent;
+    display: none;
 }
 
 #menu-icon {
     font-size: 2.2rem;
-    color: var(--accent);
+    color: var(--accent-soft);
     display: none;
     cursor: pointer;
-    background: #fff;
-    border: 1px solid rgba(197, 160, 89, 0.5);
+    background: var(--nav-glass);
+    border: 1px solid rgba(176, 38, 255, 0.35);
     border-radius: 8px;
     padding: 4px 6px;
     backdrop-filter: blur(10px);
@@ -118,7 +116,7 @@ input, textarea {
 .navbar a {
     display: inline-block;
     font-size: 18px;
-    color: var(--text);
+    color: #fff;
     text-decoration: none;
     margin-left: 35px;
     transition: 0.3s;
@@ -152,10 +150,10 @@ input, textarea {
     inset: 0;
     background: linear-gradient(
         90deg,
-        rgba(27, 38, 49, 0.78) 0%,
-        rgba(36, 51, 66, 0.48) 42%,
-        rgba(197, 160, 89, 0.22) 72%,
-        rgba(110, 139, 142, 0.28) 100%
+        rgba(18, 8, 31, 0.78) 0%,
+        rgba(26, 11, 46, 0.48) 42%,
+        rgba(176, 38, 255, 0.22) 72%,
+        rgba(153, 102, 204, 0.28) 100%
     );
     pointer-events: none;
 }
@@ -190,8 +188,9 @@ input, textarea {
 }
 
 .home-content h1 {
-    font-size: 56px;
-    font-weight: 700;
+    font-family: "Great Vibes", cursive;
+    font-size: 64px;
+    font-weight: 400;
     margin: -3px 0;
     opacity: 0;
     animation: slideRight 1s ease forwards;
@@ -217,7 +216,7 @@ input, textarea {
     object-position: center top;
     border-radius: 50%;
     border: 4px solid var(--accent);
-    box-shadow: 0 0 25px var(--accent), 0 0 60px rgba(110, 139, 142, 0.45);
+    box-shadow: 0 0 25px var(--accent), 0 0 60px rgba(176, 38, 255, 0.45);
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1.2s;
@@ -229,9 +228,9 @@ input, textarea {
 .home-img img.is-shadowed {
     transform: translateY(4px) scale(0.98);
     box-shadow:
-        0 22px 45px rgba(27, 38, 49, 0.75),
+        0 22px 45px rgba(18, 8, 31, 0.75),
         0 0 40px var(--accent),
-        0 0 90px rgba(110, 139, 142, 0.8);
+        0 0 90px rgba(176, 38, 255, 0.8);
 }
 
 .home-sci a {
@@ -266,7 +265,7 @@ input, textarea {
     border: none;
     border-radius: 40px;
     font-size: 16px;
-    color: #1b2631;
+    color: #12081f;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
@@ -315,7 +314,7 @@ section {
     object-position: center top;
     border-radius: 24px;
     border: 3px solid var(--accent);
-    box-shadow: 0 0 30px rgba(197, 160, 89, 0.4);
+    box-shadow: 0 0 30px rgba(176, 38, 255, 0.4);
     cursor: pointer;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -324,9 +323,9 @@ section {
 .about-img img.is-shadowed {
     transform: translateY(6px) scale(0.98);
     box-shadow:
-        0 24px 50px rgba(27, 38, 49, 0.75),
+        0 24px 50px rgba(18, 8, 31, 0.75),
         0 0 40px var(--accent),
-        0 0 85px rgba(110, 139, 142, 0.75);
+        0 0 85px rgba(176, 38, 255, 0.75);
 }
 
 .about-text {
@@ -366,7 +365,7 @@ section {
 .skill-box,
 .services-box {
     background: var(--card);
-    border: 1px solid rgba(110, 139, 142, 0.4);
+    border: 1px solid rgba(176, 38, 255, 0.4);
     border-radius: 16px;
     padding: 32px 22px;
     text-align: center;
@@ -376,7 +375,7 @@ section {
 .skill-box:hover,
 .services-box:hover {
     transform: translateY(-8px);
-    box-shadow: 0 0 24px rgba(197, 160, 89, 0.45);
+    box-shadow: 0 0 24px rgba(176, 38, 255, 0.45);
     border-color: var(--accent);
 }
 
@@ -462,10 +461,10 @@ section {
 .contact textarea {
     width: 100%;
     padding: 14px 16px;
-    border: 1px solid rgba(110, 139, 142, 0.45);
+    border: 1px solid rgba(176, 38, 255, 0.45);
     border-radius: 10px;
     background: var(--card);
-    color: #1b2631;
+    color: #fff;
     font-size: 16px;
     font-weight: 400;
     outline: none;
@@ -474,7 +473,7 @@ section {
 .contact input:focus,
 .contact textarea:focus {
     border-color: var(--accent);
-    box-shadow: 0 0 12px rgba(197, 160, 89, 0.35);
+    box-shadow: 0 0 12px rgba(176, 38, 255, 0.35);
 }
 
 .contact input.is-invalid,
@@ -509,9 +508,9 @@ section {
     line-height: 1.6;
     color: #f4f1ea;
     padding: 24px 20px;
-    border: 1px solid rgba(110, 139, 142, 0.5);
+    border: 1px solid rgba(176, 38, 255, 0.5);
     border-radius: 12px;
-    background: rgba(197, 160, 89, 0.18);
+    background: rgba(176, 38, 255, 0.18);
 }
 
 .form-status.is-error {
@@ -525,7 +524,7 @@ section {
     padding: 22px 10%;
     background: #15202b;
     color: #f4f1ea;
-    border-top: 1px solid rgba(110, 139, 142, 0.3);
+    border-top: 1px solid rgba(176, 38, 255, 0.3);
 }
 
 .footer-icon {
@@ -535,7 +534,7 @@ section {
     align-items: center;
     justify-content: center;
     background: var(--accent);
-    color: #1b2631;
+    color: #12081f;
     border-radius: 8px;
     font-size: 24px;
     text-decoration: none;
@@ -629,9 +628,8 @@ section {
         order: 2;
     }
 
-    .logo img {
-        height: 34px;
-        max-width: 110px;
+    .logo {
+        font-size: 28px;
     }
 
     #menu-icon {
@@ -652,7 +650,7 @@ section {
         background: var(--nav-glass);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(110, 139, 142, 0.35);
+        border-bottom: 1px solid rgba(176, 38, 255, 0.35);
         border-top: none;
         flex-direction: column;
         z-index: 99;
