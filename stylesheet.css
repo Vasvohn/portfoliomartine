@@ -562,9 +562,9 @@ section {
         right: 0;
         left: 0;
         width: 100%;
-        background: rgba(176, 38, 255, 0.42);
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
+        background: rgba(176, 38, 255, 0.28);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(214, 164, 255, 0.35);
         display: none;
         flex-direction: column;
