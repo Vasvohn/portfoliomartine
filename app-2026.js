@@ -273,7 +273,9 @@ const status = document.getElementById("form-status");
 
 function showThanks() {
     form.hidden = true;
+    form.setAttribute("aria-hidden", "true");
     status.hidden = false;
+    status.removeAttribute("hidden");
     status.classList.remove("is-error");
     status.classList.add("is-thanks");
     status.textContent = translations[currentLang].contactStatus;
@@ -312,8 +314,8 @@ form.addEventListener("submit", (event) => {
 
     document.getElementById("mail-subject").value = `Portfolio — ${subject}`;
     sessionStorage.setItem("contact-sent", "1");
-    showThanks();
     form.submit();
+    showThanks();
 });
 
 if (sessionStorage.getItem("contact-sent") === "1" || new URLSearchParams(window.location.search).get("sent") === "1") {
