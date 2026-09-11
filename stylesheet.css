@@ -7,15 +7,15 @@
 }
 
 :root {
-    --accent: #40e0d0;
-    --amethyst: #1e3aff;
-    --accent-soft: #40e0d0;
-    --bg: #1e3aff;
-    --bg-alt: #1529c4;
-    --card: #2c4dff;
-    --text: #e8fbff;
-    --dark: #1e3aff;
-    --nav-glass: rgba(30, 58, 255, 0.55);
+    --accent: #c77dff;
+    --amethyst: #2a2438;
+    --accent-soft: #d4bfff;
+    --bg: #101014;
+    --bg-alt: #16161e;
+    --card: #1e1c28;
+    --text: #f4f1ea;
+    --dark: #101014;
+    --nav-glass: rgba(16, 16, 20, 0.72);
 }
 
 html, body {
@@ -44,7 +44,7 @@ input, textarea {
     width: 100%;
     padding: 10px 8%;
     background: var(--nav-glass);
-    border-bottom: 1px solid rgba(64, 224, 208, 0.35);
+    border-bottom: 1px solid rgba(199, 125, 255, 0.35);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,7 +79,7 @@ input, textarea {
 
 .lang-switch button.active {
     background: var(--accent);
-    color: #fff;
+    color: var(--dark);
 }
 
 .logo {
@@ -106,7 +106,7 @@ input, textarea {
     display: none;
     cursor: pointer;
     background: var(--nav-glass);
-    border: 1px solid rgba(64, 224, 208, 0.35);
+    border: 1px solid rgba(199, 125, 255, 0.35);
     border-radius: 8px;
     padding: 4px 6px;
     backdrop-filter: blur(10px);
@@ -150,10 +150,10 @@ input, textarea {
     inset: 0;
     background: linear-gradient(
         90deg,
-        rgba(30, 58, 255, 0.78) 0%,
-        rgba(21, 41, 196, 0.48) 42%,
-        rgba(64, 224, 208, 0.22) 72%,
-        rgba(64, 224, 208, 0.28) 100%
+        rgba(16, 16, 20, 0.78) 0%,
+        rgba(42, 36, 56, 0.55) 42%,
+        rgba(199, 125, 255, 0.22) 72%,
+        rgba(199, 125, 255, 0.28) 100%
     );
     pointer-events: none;
 }
@@ -216,7 +216,7 @@ input, textarea {
     object-position: center top;
     border-radius: 50%;
     border: 4px solid var(--accent);
-    box-shadow: 0 0 25px var(--accent), 0 0 60px rgba(64, 224, 208, 0.45);
+    box-shadow: 0 0 25px var(--accent), 0 0 60px rgba(199, 125, 255, 0.45);
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1.2s;
@@ -228,9 +228,9 @@ input, textarea {
 .home-img img.is-shadowed {
     transform: translateY(4px) scale(0.98);
     box-shadow:
-        0 22px 45px rgba(30, 58, 255, 0.75),
+        0 22px 45px rgba(16, 16, 20, 0.75),
         0 0 40px var(--accent),
-        0 0 90px rgba(64, 224, 208, 0.8);
+        0 0 90px rgba(199, 125, 255, 0.8);
 }
 
 .home-sci a {
@@ -265,7 +265,7 @@ input, textarea {
     border: none;
     border-radius: 40px;
     font-size: 16px;
-    color: #1e3aff;
+    color: #101014;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
@@ -314,7 +314,7 @@ section {
     object-position: center top;
     border-radius: 24px;
     border: 3px solid var(--accent);
-    box-shadow: 0 0 30px rgba(64, 224, 208, 0.4);
+    box-shadow: 0 0 30px rgba(199, 125, 255, 0.4);
     cursor: pointer;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -323,9 +323,9 @@ section {
 .about-img img.is-shadowed {
     transform: translateY(6px) scale(0.98);
     box-shadow:
-        0 24px 50px rgba(30, 58, 255, 0.75),
+        0 24px 50px rgba(16, 16, 20, 0.75),
         0 0 40px var(--accent),
-        0 0 85px rgba(64, 224, 208, 0.75);
+        0 0 85px rgba(199, 125, 255, 0.75);
 }
 
 .about-text {
@@ -365,7 +365,7 @@ section {
 .skill-box,
 .services-box {
     background: var(--card);
-    border: 1px solid rgba(64, 224, 208, 0.4);
+    border: 1px solid rgba(199, 125, 255, 0.4);
     border-radius: 16px;
     padding: 32px 22px;
     text-align: center;
@@ -375,7 +375,7 @@ section {
 .skill-box:hover,
 .services-box:hover {
     transform: translateY(-8px);
-    box-shadow: 0 0 24px rgba(64, 224, 208, 0.45);
+    box-shadow: 0 0 24px rgba(199, 125, 255, 0.45);
     border-color: var(--accent);
 }
 
@@ -469,7 +469,7 @@ section {
 .contact textarea {
     width: 100%;
     padding: 14px 16px;
-    border: 1px solid rgba(64, 224, 208, 0.45);
+    border: 1px solid rgba(199, 125, 255, 0.45);
     border-radius: 10px;
     background: var(--card);
     color: #fff;
@@ -481,7 +481,7 @@ section {
 .contact input:focus,
 .contact textarea:focus {
     border-color: var(--accent);
-    box-shadow: 0 0 12px rgba(64, 224, 208, 0.35);
+    box-shadow: 0 0 12px rgba(199, 125, 255, 0.35);
 }
 
 .contact input.is-invalid,
@@ -514,11 +514,11 @@ section {
 .form-status.is-thanks {
     font-size: 18px;
     line-height: 1.6;
-    color: #e8fbff;
+    color: #f4f1ea;
     padding: 24px 20px;
-    border: 1px solid rgba(64, 224, 208, 0.5);
+    border: 1px solid rgba(199, 125, 255, 0.5);
     border-radius: 12px;
-    background: rgba(64, 224, 208, 0.18);
+    background: rgba(199, 125, 255, 0.18);
 }
 
 .form-status.is-error {
@@ -530,9 +530,9 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 22px 10%;
-    background: #1529c4;
-    color: #e8fbff;
-    border-top: 1px solid rgba(64, 224, 208, 0.3);
+    background: #0c0c10;
+    color: #f4f1ea;
+    border-top: 1px solid rgba(199, 125, 255, 0.3);
 }
 
 .footer-icon {
@@ -542,7 +542,7 @@ section {
     align-items: center;
     justify-content: center;
     background: var(--accent);
-    color: #1e3aff;
+    color: #101014;
     border-radius: 8px;
     font-size: 24px;
     text-decoration: none;
@@ -658,7 +658,7 @@ section {
         background: var(--nav-glass);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(64, 224, 208, 0.35);
+        border-bottom: 1px solid rgba(199, 125, 255, 0.35);
         border-top: none;
         flex-direction: column;
         z-index: 99;
