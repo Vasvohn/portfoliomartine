@@ -88,6 +88,10 @@ const translations = {
         contactSending: "Envoi en cours…",
         contactError: "L’envoi a échoué. Veuillez réessayer.",
         footerRights: "Tous droits réservés.",
+        cookieText: "Ce site utilise des cookies. Vous pouvez accepter ou refuser.",
+        cookieAccept: "Accepter",
+        cookieRefuse: "Refuser",
+        cookieAria: "Bandeau cookies",
         backTop: "Retour en haut",
         pageDesc: "Portfolio d'Asiata Martine, développeuse fullstack, front-end, back-end et web designer.",
         typed: ["Développeuse Fullstack", "Développeuse Front-end", "Développeuse Back-end", "Web Designer"]
@@ -146,6 +150,10 @@ const translations = {
         contactSending: "Sending…",
         contactError: "Sending failed. Please try again.",
         footerRights: "All rights reserved.",
+        cookieText: "This site uses cookies. You can accept or refuse.",
+        cookieAccept: "Accept",
+        cookieRefuse: "Refuse",
+        cookieAria: "Cookie banner",
         backTop: "Back to top",
         pageDesc: "Portfolio of Asiata Martine, full-stack, front-end and back-end developer and web designer.",
         typed: ["Full-stack Developer", "Front-end Developer", "Back-end Developer", "Web Designer"]
@@ -344,3 +352,27 @@ if ("IntersectionObserver" in window) {
 } else {
     revealBlocks.forEach((block) => block.classList.add("in-view"));
 }
+
+const cookieBanner = document.getElementById("cookie-banner");
+const COOKIE_KEY = "cookie-consent";
+
+function getConsent() {
+    const match = document.cookie.split("; ").find((row) => row.startsWith(`${COOKIE_KEY}=`));
+    return match ? match.split("=")[1] : localStorage.getItem(COOKIE_KEY);
+}
+
+function saveConsent(value) {
+    localStorage.setItem(COOKIE_KEY, value);
+    const expires = new Date();
+    expires.setFullYear(expires.getFullYear() + 1);
+    document.cookie = `${COOKIE_KEY}=${value}; expires=${expires.toUTCString()}; path=/; SameSite=Lax`;
+    cookieBanner.hidden = true;
+}
+
+if (!getConsent()) {
+    cookieBanner.hidden = false;
+}
+
+document.getElementById("cookie-accept").addEventListener("click", () => saveConsent("accepted"));
+document.getElementById("cookie-refuse").addEventListener("click", () => saveConsent("refused"));
+
