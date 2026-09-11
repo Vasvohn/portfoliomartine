@@ -7,15 +7,15 @@
 }
 
 :root {
-    --accent: #1a8f88;
-    --amethyst: #14919b;
-    --accent-soft: #8fd4cf;
-    --bg: #061416;
-    --bg-alt: #0a1e20;
-    --card: #123033;
-    --text: #e8f6f5;
-    --dark: #061416;
-    --nav-glass: rgba(26, 143, 136, 0.3);
+    --accent: #e85a8c;
+    --amethyst: #f472b6;
+    --accent-soft: #f7b7cc;
+    --bg: #160810;
+    --bg-alt: #1e0c14;
+    --card: #2a121c;
+    --text: #fde8f0;
+    --dark: #160810;
+    --nav-glass: rgba(232, 90, 140, 0.3);
 }
 
 html, body {
@@ -44,7 +44,7 @@ input, textarea {
     width: 100%;
     padding: 10px 8%;
     background: var(--nav-glass);
-    border-bottom: 1px solid rgba(26, 143, 136, 0.35);
+    border-bottom: 1px solid rgba(232, 90, 140, 0.35);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,7 +106,7 @@ input, textarea {
     display: none;
     cursor: pointer;
     background: var(--nav-glass);
-    border: 1px solid rgba(26, 143, 136, 0.35);
+    border: 1px solid rgba(232, 90, 140, 0.35);
     border-radius: 8px;
     padding: 4px 6px;
     backdrop-filter: blur(10px);
@@ -150,9 +150,9 @@ input, textarea {
     inset: 0;
     background: linear-gradient(
         90deg,
-        rgba(6, 20, 22, 0.78) 0%,
-        rgba(10, 30, 32, 0.48) 42%,
-        rgba(26, 143, 136, 0.22) 72%,
+        rgba(22, 8, 16, 0.78) 0%,
+        rgba(30, 12, 20, 0.48) 42%,
+        rgba(232, 90, 140, 0.22) 72%,
         rgba(153, 102, 204, 0.28) 100%
     );
     pointer-events: none;
@@ -216,7 +216,7 @@ input, textarea {
     object-position: center top;
     border-radius: 50%;
     border: 4px solid var(--accent);
-    box-shadow: 0 0 25px var(--accent), 0 0 60px rgba(26, 143, 136, 0.45);
+    box-shadow: 0 0 25px var(--accent), 0 0 60px rgba(232, 90, 140, 0.45);
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1.2s;
@@ -228,9 +228,9 @@ input, textarea {
 .home-img img.is-shadowed {
     transform: translateY(4px) scale(0.98);
     box-shadow:
-        0 22px 45px rgba(6, 20, 22, 0.75),
+        0 22px 45px rgba(22, 8, 16, 0.75),
         0 0 40px var(--accent),
-        0 0 90px rgba(26, 143, 136, 0.8);
+        0 0 90px rgba(232, 90, 140, 0.8);
 }
 
 .home-sci a {
@@ -265,7 +265,7 @@ input, textarea {
     border: none;
     border-radius: 40px;
     font-size: 16px;
-    color: #061416;
+    color: #160810;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
@@ -314,7 +314,7 @@ section {
     object-position: center top;
     border-radius: 24px;
     border: 3px solid var(--accent);
-    box-shadow: 0 0 30px rgba(26, 143, 136, 0.4);
+    box-shadow: 0 0 30px rgba(232, 90, 140, 0.4);
     cursor: pointer;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -323,9 +323,9 @@ section {
 .about-img img.is-shadowed {
     transform: translateY(6px) scale(0.98);
     box-shadow:
-        0 24px 50px rgba(6, 20, 22, 0.75),
+        0 24px 50px rgba(22, 8, 16, 0.75),
         0 0 40px var(--accent),
-        0 0 85px rgba(26, 143, 136, 0.75);
+        0 0 85px rgba(232, 90, 140, 0.75);
 }
 
 .about-text {
@@ -365,7 +365,7 @@ section {
 .skill-box,
 .services-box {
     background: var(--card);
-    border: 1px solid rgba(26, 143, 136, 0.4);
+    border: 1px solid rgba(232, 90, 140, 0.4);
     border-radius: 16px;
     padding: 32px 22px;
     text-align: center;
@@ -375,7 +375,7 @@ section {
 .skill-box:hover,
 .services-box:hover {
     transform: translateY(-8px);
-    box-shadow: 0 0 24px rgba(26, 143, 136, 0.45);
+    box-shadow: 0 0 24px rgba(232, 90, 140, 0.45);
     border-color: var(--accent);
 }
 
@@ -461,7 +461,7 @@ section {
 .contact textarea {
     width: 100%;
     padding: 14px 16px;
-    border: 1px solid rgba(26, 143, 136, 0.45);
+    border: 1px solid rgba(232, 90, 140, 0.45);
     border-radius: 10px;
     background: var(--card);
     color: #fff;
@@ -473,7 +473,7 @@ section {
 .contact input:focus,
 .contact textarea:focus {
     border-color: var(--accent);
-    box-shadow: 0 0 12px rgba(26, 143, 136, 0.35);
+    box-shadow: 0 0 12px rgba(232, 90, 140, 0.35);
 }
 
 .contact input.is-invalid,
@@ -506,11 +506,11 @@ section {
 .form-status.is-thanks {
     font-size: 18px;
     line-height: 1.6;
-    color: #e8f6f5;
+    color: #fde8f0;
     padding: 24px 20px;
-    border: 1px solid rgba(26, 143, 136, 0.5);
+    border: 1px solid rgba(232, 90, 140, 0.5);
     border-radius: 12px;
-    background: rgba(26, 143, 136, 0.18);
+    background: rgba(232, 90, 140, 0.18);
 }
 
 .form-status.is-error {
@@ -522,9 +522,9 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 22px 10%;
-    background: #041112;
-    color: #e8f6f5;
-    border-top: 1px solid rgba(26, 143, 136, 0.3);
+    background: #12060c;
+    color: #fde8f0;
+    border-top: 1px solid rgba(232, 90, 140, 0.3);
 }
 
 .footer-icon {
@@ -534,7 +534,7 @@ section {
     align-items: center;
     justify-content: center;
     background: var(--accent);
-    color: #061416;
+    color: #160810;
     border-radius: 8px;
     font-size: 24px;
     text-decoration: none;
@@ -650,7 +650,7 @@ section {
         background: var(--nav-glass);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(26, 143, 136, 0.35);
+        border-bottom: 1px solid rgba(232, 90, 140, 0.35);
         border-top: none;
         flex-direction: column;
         z-index: 99;
