@@ -425,12 +425,14 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
+    align-items: stretch;
 }
 
 .project-box {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: 100%;
     text-align: left;
     background: var(--card);
     border: 1px solid rgba(199, 125, 255, 0.4);
@@ -466,7 +468,8 @@ section {
 
 .project-link {
     display: inline-block;
-    margin-top: 18px;
+    margin-top: auto;
+    align-self: flex-start;
     padding: 10px 20px;
     border: 2px solid var(--accent);
     border-radius: 40px;
