@@ -42,6 +42,7 @@ const translations = {
         navProjects: "Projets",
         navContact: "Contact",
         homeHello: "Bonjour, je suis",
+        homeAnd: "Et je suis",
         homeIntro: "J’aide les indépendants et petites entreprises à développer leur activité grâce à des sites internet modernes, rapides et sur-mesure.",
         homeMore: "Discutons de votre projet",
         photoAlt: "Portrait d'Asiata Martine",
@@ -106,7 +107,7 @@ const translations = {
         cookieAria: "Bandeau cookies",
         backTop: "Retour en haut",
         pageDesc: "Martine conçoit des sites internet modernes, rapides et sur-mesure pour les indépendants et les petites entreprises.",
-        typed: ["Développeuse Fullstack", "Développeuse Front-end", "Développeuse Back-end", "Web Designer"]
+        typed: ["Développeuse Front-end", "Développeuse Back-end", "Développeuse Fullstack", "Web Designer"]
     },
     en: {
         navHome: "Home",
@@ -116,6 +117,7 @@ const translations = {
         navProjects: "Projects",
         navContact: "Contact",
         homeHello: "Hello, I am",
+        homeAnd: "And I am a",
         homeIntro: "I help freelancers and small businesses grow their activity with modern, fast, custom-made websites.",
         homeMore: "Let's talk about your project",
         photoAlt: "Portrait of Asiata Martine",
@@ -180,7 +182,7 @@ const translations = {
         cookieAria: "Cookie banner",
         backTop: "Back to top",
         pageDesc: "Martine designs modern, fast, custom-made websites for freelancers and small businesses.",
-        typed: ["Full-stack Developer", "Front-end Developer", "Back-end Developer", "Web Designer"]
+        typed: ["Front-end Developer", "Back-end Developer", "Full-stack Developer", "Web Designer"]
     }
 };
 
