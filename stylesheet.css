@@ -115,10 +115,10 @@ input, textarea {
 
 .navbar a {
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
     text-decoration: none;
-    margin-left: 35px;
+    margin-left: 22px;
     transition: 0.3s;
     opacity: 0;
     animation: slideTop 0.5s ease forwards;
@@ -198,6 +198,7 @@ input, textarea {
 }
 
 .home-content p {
+    max-width: 38rem;
     font-size: 18px;
     line-height: 1.7;
     opacity: 0;
@@ -282,6 +283,11 @@ input, textarea {
         0 0 25px var(--accent),
         0 0 50px var(--accent),
         0 0 100px var(--accent);
+}
+
+.home-content .home-cta {
+    opacity: 1;
+    animation: none;
 }
 
 section {
@@ -386,6 +392,15 @@ section {
     margin-bottom: 12px;
 }
 
+.skill-glyph {
+    display: block;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
 .skill-box h3,
 .services-box h3 {
     font-size: 20px;
@@ -402,8 +417,74 @@ section {
     color: var(--accent-soft);
 }
 
-.timeline {
+.projects {
     background: var(--bg-alt);
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    background: var(--card);
+    border: 1px solid rgba(199, 125, 255, 0.4);
+    border-radius: 16px;
+    padding: 32px 22px;
+}
+
+.project-box h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.project-box p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--accent-soft);
+}
+
+.project-kicker {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.project-tech {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 20px;
+    border: 2px solid var(--accent);
+    border-radius: 40px;
+    background: transparent;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.project-link:hover {
+    background: var(--accent);
+    color: var(--dark);
+}
+
+.timeline {
+    background: var(--bg);
 }
 
 .timeline-container {
@@ -767,7 +848,8 @@ section {
 
 .reveal .skill-box,
 .reveal .services-box,
-.reveal .timeline-item {
+.reveal .timeline-item,
+.reveal .project-box {
     opacity: 0;
     transform: translateY(28px);
     transition: opacity 1.4s ease, transform 1.4s ease;
@@ -775,20 +857,24 @@ section {
 
 .reveal.in-view .skill-box,
 .reveal.in-view .services-box,
-.reveal.in-view .timeline-item {
+.reveal.in-view .timeline-item,
+.reveal.in-view .project-box {
     opacity: 1;
     transform: translateY(0);
 }
 
 .reveal.in-view .skill-box:nth-child(1),
 .reveal.in-view .services-box:nth-child(1),
-.reveal.in-view .timeline-item:nth-child(1) { transition-delay: 0.1s; }
+.reveal.in-view .timeline-item:nth-child(1),
+.reveal.in-view .project-box:nth-child(1) { transition-delay: 0.1s; }
 .reveal.in-view .skill-box:nth-child(2),
 .reveal.in-view .services-box:nth-child(2),
-.reveal.in-view .timeline-item:nth-child(2) { transition-delay: 0.25s; }
+.reveal.in-view .timeline-item:nth-child(2),
+.reveal.in-view .project-box:nth-child(2) { transition-delay: 0.25s; }
 .reveal.in-view .skill-box:nth-child(3),
 .reveal.in-view .services-box:nth-child(3),
-.reveal.in-view .timeline-item:nth-child(3) { transition-delay: 0.4s; }
+.reveal.in-view .timeline-item:nth-child(3),
+.reveal.in-view .project-box:nth-child(3) { transition-delay: 0.4s; }
 .reveal.in-view .skill-box:nth-child(4),
 .reveal.in-view .services-box:nth-child(4),
 .reveal.in-view .timeline-item:nth-child(4) { transition-delay: 0.55s; }
@@ -796,12 +882,19 @@ section {
 .reveal.in-view .skill-box:nth-child(6) { transition-delay: 0.85s; }
 .reveal.in-view .skill-box:nth-child(7) { transition-delay: 1s; }
 .reveal.in-view .skill-box:nth-child(8) { transition-delay: 1.15s; }
+.reveal.in-view .skill-box:nth-child(9) { transition-delay: 1.3s; }
+.reveal.in-view .skill-box:nth-child(10) { transition-delay: 1.45s; }
+.reveal.in-view .skill-box:nth-child(11) { transition-delay: 1.6s; }
+.reveal.in-view .skill-box:nth-child(12) { transition-delay: 1.75s; }
+.reveal.in-view .skill-box:nth-child(13) { transition-delay: 1.9s; }
+.reveal.in-view .skill-box:nth-child(14) { transition-delay: 2.05s; }
 
 @media (prefers-reduced-motion: reduce) {
     .reveal,
     .reveal .skill-box,
     .reveal .services-box,
-    .reveal .timeline-item {
+    .reveal .timeline-item,
+    .reveal .project-box {
         opacity: 1;
         transform: none;
         transition: none;

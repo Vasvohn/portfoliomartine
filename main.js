@@ -39,11 +39,11 @@ const translations = {
         navAbout: "À propos",
         navSkills: "Compétences",
         navServices: "Services",
+        navProjects: "Projets",
         navContact: "Contact",
         homeHello: "Bonjour, je suis",
-        homeAnd: "Et je suis",
-        homeIntro: "Développeuse fullstack et web designer. Après plusieurs années dans la santé, je me consacre depuis 2023 au développement web, en autoentrepreneur.",
-        homeMore: "En savoir plus",
+        homeIntro: "J’aide les indépendants et petites entreprises à développer leur activité grâce à des sites internet modernes, rapides et sur-mesure.",
+        homeMore: "Discutons de votre projet",
         photoAlt: "Portrait d'Asiata Martine",
         aboutTitle: "À propos de <span>moi</span>",
         aboutRole: "Développeuse fullstack & web designer",
@@ -60,6 +60,20 @@ const translations = {
         svcBackText: "Logique métier, API et bases de données avec PHP/MySQL et Python, pour des sites fiables et maintenables.",
         svcDesignTitle: "Web designer",
         svcDesignText: "Identité visuelle, mise en page et expérience utilisateur pour un site clair, professionnel et mémorable.",
+        projectsTitle: "Mes <span>projets</span>",
+        project1Kind: "Site vitrine",
+        project1Title: "Artisan paysagiste",
+        project1Need: "Être trouvé localement et montrer ses réalisations pour recevoir des demandes de devis, sans dépendre uniquement du bouche-à-oreille.",
+        project1Tech: "HTML · CSS · JavaScript",
+        project2Kind: "Réservation",
+        project2Title: "Restaurant",
+        project2Need: "Présenter la carte et permettre de réserver une table en ligne, sans que chaque demande passe par un appel téléphonique.",
+        project2Tech: "React · Tailwind CSS",
+        project3Kind: "Landing page",
+        project3Title: "Coach",
+        project3Need: "Expliquer une offre en une page claire et transformer les visites en demandes de rendez-vous.",
+        project3Tech: "Next.js · React · Tailwind CSS",
+        projectView: "Voir le projet",
         pathTitle: "Mon <span>parcours</span>",
         path1Title: "Santé",
         path1Text: "Début de mon parcours professionnel dans le secteur de la santé.",
@@ -73,16 +87,14 @@ const translations = {
         path4Title: "Autoentrepreneur",
         path4Text: "Activité indépendante : sites, applications et accompagnement digital.",
         contactTitle: "Me <span>contacter</span>",
-        labelName: "Nom *",
-        labelEmail: "Adresse e-mail *",
-        labelSubject: "Sujet *",
-        labelMessage: "Message *",
-        phName: "Votre nom *",
-        phEmail: "Votre adresse e-mail *",
-        phSubject: "Sujet *",
-        phMessage: "Votre message *",
-        contactSend: "Envoyer",
-        contactRequired: "Tous les champs sont obligatoires : nom, adresse e-mail, sujet et message.",
+        labelName: "Nom",
+        labelEmail: "E-mail",
+        labelMessage: "Message",
+        phName: "Votre nom",
+        phEmail: "Votre e-mail",
+        phMessage: "Parlez-moi de votre projet",
+        contactSend: "Envoyer mon message",
+        contactRequired: "Tous les champs sont obligatoires : nom, e-mail et message.",
         contactInvalidEmail: "Veuillez entrer une adresse e-mail valide.",
         contactStatus: "Merci pour votre message. Je vous répondrai dès que possible.",
         contactSending: "Envoi en cours…",
@@ -93,7 +105,7 @@ const translations = {
         cookieRefuse: "Refuser",
         cookieAria: "Bandeau cookies",
         backTop: "Retour en haut",
-        pageDesc: "Portfolio d'Asiata Martine, développeuse fullstack, front-end, back-end et web designer.",
+        pageDesc: "Martine conçoit des sites internet modernes, rapides et sur-mesure pour les indépendants et les petites entreprises.",
         typed: ["Développeuse Fullstack", "Développeuse Front-end", "Développeuse Back-end", "Web Designer"]
     },
     en: {
@@ -101,11 +113,11 @@ const translations = {
         navAbout: "About",
         navSkills: "Skills",
         navServices: "Services",
+        navProjects: "Projects",
         navContact: "Contact",
         homeHello: "Hello, I am",
-        homeAnd: "And I am a",
-        homeIntro: "Full-stack developer and web designer. After several years in healthcare, I have focused on web development since 2023, as a self-employed professional.",
-        homeMore: "Learn more",
+        homeIntro: "I help freelancers and small businesses grow their activity with modern, fast, custom-made websites.",
+        homeMore: "Let's talk about your project",
         photoAlt: "Portrait of Asiata Martine",
         aboutTitle: "About <span>me</span>",
         aboutRole: "Full-stack developer & web designer",
@@ -122,6 +134,20 @@ const translations = {
         svcBackText: "Business logic, APIs and databases with PHP/MySQL and Python, for reliable and maintainable websites.",
         svcDesignTitle: "Web designer",
         svcDesignText: "Visual identity, layout and user experience for a clear, professional and memorable website.",
+        projectsTitle: "My <span>projects</span>",
+        project1Kind: "Showcase website",
+        project1Title: "Landscape gardener",
+        project1Need: "Be found locally and show completed work to receive quote requests, without relying only on word of mouth.",
+        project1Tech: "HTML · CSS · JavaScript",
+        project2Kind: "Reservation",
+        project2Title: "Restaurant",
+        project2Need: "Present the menu and allow a table to be booked online, without every request going through a phone call.",
+        project2Tech: "React · Tailwind CSS",
+        project3Kind: "Landing page",
+        project3Title: "Coach",
+        project3Need: "Explain an offer on one clear page and turn visits into appointment requests.",
+        project3Tech: "Next.js · React · Tailwind CSS",
+        projectView: "View the project",
         pathTitle: "My <span>journey</span>",
         path1Title: "Healthcare",
         path1Text: "Start of my professional path in the healthcare sector.",
@@ -135,16 +161,14 @@ const translations = {
         path4Title: "Self-employed",
         path4Text: "Independent activity: websites, applications and digital support.",
         contactTitle: "Contact <span>me</span>",
-        labelName: "Name *",
-        labelEmail: "Email address *",
-        labelSubject: "Subject *",
-        labelMessage: "Message *",
-        phName: "Your name *",
-        phEmail: "Your email address *",
-        phSubject: "Subject *",
-        phMessage: "Your message *",
-        contactSend: "Send",
-        contactRequired: "All fields are required: name, email address, subject and message.",
+        labelName: "Name",
+        labelEmail: "E-mail",
+        labelMessage: "Message",
+        phName: "Your name",
+        phEmail: "Your email",
+        phMessage: "Tell me about your project",
+        contactSend: "Send my message",
+        contactRequired: "All fields are required: name, email and message.",
         contactInvalidEmail: "Please enter a valid email address.",
         contactStatus: "Thank you for your message. I will get back to you as soon as possible.",
         contactSending: "Sending…",
@@ -155,7 +179,7 @@ const translations = {
         cookieRefuse: "Refuse",
         cookieAria: "Cookie banner",
         backTop: "Back to top",
-        pageDesc: "Portfolio of Asiata Martine, full-stack, front-end and back-end developer and web designer.",
+        pageDesc: "Martine designs modern, fast, custom-made websites for freelancers and small businesses.",
         typed: ["Full-stack Developer", "Front-end Developer", "Back-end Developer", "Web Designer"]
     }
 };
@@ -164,6 +188,9 @@ let typed;
 let currentLang = localStorage.getItem("portfolio-lang") === "en" ? "en" : "fr";
 
 function startTyped(lang) {
+    if (!document.querySelector(".text")) {
+        return;
+    }
     if (typed) {
         typed.destroy();
     }
@@ -293,18 +320,16 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
     const name = form.name.value.trim();
     const email = form.email.value.trim();
-    const subject = form.subject.value.trim();
     const message = form.message.value.trim();
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    [form.name, form.email, form.subject, form.message].forEach((field) => {
+    [form.name, form.email, form.message].forEach((field) => {
         field.classList.remove("is-invalid");
     });
 
-    if (!name || !email || !subject || !message) {
+    if (!name || !email || !message) {
         if (!name) form.name.classList.add("is-invalid");
         if (!email) form.email.classList.add("is-invalid");
-        if (!subject) form.subject.classList.add("is-invalid");
         if (!message) form.message.classList.add("is-invalid");
         status.hidden = false;
         status.classList.add("is-error");
@@ -320,7 +345,6 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    document.getElementById("mail-subject").value = `Portfolio — ${subject}`;
     sessionStorage.setItem("contact-sent", "1");
     form.submit();
     showThanks();

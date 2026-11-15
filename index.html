@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Martine.A | Portfolio</title>
-    <meta name="description" content="Portfolio d'Asiata Martine, développeuse fullstack, front-end, back-end et web designer.">
+    <meta name="description" content="Martine conçoit des sites internet modernes, rapides et sur-mesure pour les indépendants et les petites entreprises.">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com https://unpkg.com; script-src 'self' https://unpkg.com; connect-src 'self' https://formsubmit.co; frame-src https://formsubmit.co; object-src 'none'; base-uri 'self'; form-action 'self' mailto: https://formsubmit.co;">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="theme-2026.css?v=12">
+    <link rel="stylesheet" href="theme-2026.css?v=14">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </head>
@@ -25,7 +25,8 @@
             <a href="#about" style="--i:2" data-i18n="navAbout">À propos</a>
             <a href="#skills" style="--i:3" data-i18n="navSkills">Compétences</a>
             <a href="#services" style="--i:4" data-i18n="navServices">Services</a>
-            <a href="#contact" style="--i:5" data-i18n="navContact">Contact</a>
+            <a href="#projects" style="--i:5" data-i18n="navProjects">Projets</a>
+            <a href="#contact" style="--i:6" data-i18n="navContact">Contact</a>
         </nav>
         <div class="header-right">
             <div class="lang-switch" role="group" aria-label="Language">
@@ -39,17 +40,13 @@
     <section class="home" id="home">
         <div class="home-content">
             <h3 data-i18n="homeHello">Bonjour, je suis</h3>
-            <h1>Martine .A</h1>
-            <h3><span data-i18n="homeAnd">Et je suis</span> <span class="text"></span></h3>
-            <p data-i18n="homeIntro">
-                Développeuse fullstack et web designer. Après plusieurs années dans la santé,
-                je me consacre depuis 2023 au développement web, en autoentrepreneur.
-            </p>
+            <h1>Martine</h1>
+            <p data-i18n="homeIntro">J’aide les indépendants et petites entreprises à développer leur activité grâce à des sites internet modernes, rapides et sur-mesure.</p>
             <div class="home-sci">
                 <a href="https://github.com/Vasvohn" target="_blank" rel="noopener noreferrer" style="--i:7" aria-label="GitHub"><i class="bx bxl-github"></i></a>
                 <a href="#contact" style="--i:8" aria-label="Email"><i class="bx bx-envelope"></i></a>
             </div>
-            <a href="#about" class="btn-box" data-i18n="homeMore">En savoir plus</a>
+            <a href="#contact" class="btn-box home-cta" data-i18n="homeMore">Discutons de votre projet</a>
         </div>
         <div class="home-img">
             <img src="images/profile.jpg" alt="Portrait d'Asiata Martine" data-i18n-alt="photoAlt" draggable="false">
@@ -113,6 +110,30 @@
                 <i class="bx bx-palette"></i>
                 <h3>Web Design</h3>
             </div>
+            <div class="skill-box">
+                <i class="bx bxl-typescript"></i>
+                <h3>TypeScript</h3>
+            </div>
+            <div class="skill-box">
+                <i class="bx bxl-react"></i>
+                <h3>React</h3>
+            </div>
+            <div class="skill-box">
+                <span class="skill-glyph" aria-hidden="true">N</span>
+                <h3>Next.js</h3>
+            </div>
+            <div class="skill-box">
+                <i class="bx bxl-tailwind-css"></i>
+                <h3>Tailwind CSS</h3>
+            </div>
+            <div class="skill-box">
+                <i class="bx bxl-git"></i>
+                <h3>Git</h3>
+            </div>
+            <div class="skill-box">
+                <i class="bx bxl-figma"></i>
+                <h3>Figma</h3>
+            </div>
         </div>
     </section>
 
@@ -138,6 +159,33 @@
                 <i class="bx bx-brush"></i>
                 <h3 data-i18n="svcDesignTitle">Web designer</h3>
                 <p data-i18n="svcDesignText">Identité visuelle, mise en page et expérience utilisateur pour un site clair, professionnel et mémorable.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects reveal" id="projects">
+        <h2 class="heading" data-i18n-html="projectsTitle">Mes <span>projets</span></h2>
+        <div class="projects-container">
+            <div class="project-box">
+                <p class="project-kicker" data-i18n="project1Kind">Site vitrine</p>
+                <h3 data-i18n="project1Title">Artisan paysagiste</h3>
+                <p data-i18n="project1Need">Être trouvé localement et montrer ses réalisations pour recevoir des demandes de devis, sans dépendre uniquement du bouche-à-oreille.</p>
+                <p class="project-tech" data-i18n="project1Tech">HTML · CSS · JavaScript</p>
+                <a href="#contact" class="project-link" data-i18n="projectView">Voir le projet</a>
+            </div>
+            <div class="project-box">
+                <p class="project-kicker" data-i18n="project2Kind">Réservation</p>
+                <h3 data-i18n="project2Title">Restaurant</h3>
+                <p data-i18n="project2Need">Présenter la carte et permettre de réserver une table en ligne, sans que chaque demande passe par un appel téléphonique.</p>
+                <p class="project-tech" data-i18n="project2Tech">React · Tailwind CSS</p>
+                <a href="#contact" class="project-link" data-i18n="projectView">Voir le projet</a>
+            </div>
+            <div class="project-box">
+                <p class="project-kicker" data-i18n="project3Kind">Landing page</p>
+                <h3 data-i18n="project3Title">Coach</h3>
+                <p data-i18n="project3Need">Expliquer une offre en une page claire et transformer les visites en demandes de rendez-vous.</p>
+                <p class="project-tech" data-i18n="project3Tech">Next.js · React · Tailwind CSS</p>
+                <a href="#contact" class="project-link" data-i18n="projectView">Voir le projet</a>
             </div>
         </div>
     </section>
@@ -177,23 +225,19 @@
             <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
             <div class="input-box">
                 <label>
-                    <span data-i18n="labelName">Nom *</span>
-                    <input type="text" name="name" data-i18n-placeholder="phName" placeholder="Votre nom *" required minlength="2" autocomplete="name">
+                    <span data-i18n="labelName">Nom</span>
+                    <input type="text" name="name" data-i18n-placeholder="phName" placeholder="Votre nom" required minlength="2" autocomplete="name">
                 </label>
                 <label>
-                    <span data-i18n="labelEmail">Adresse e-mail *</span>
-                    <input type="email" name="email" data-i18n-placeholder="phEmail" placeholder="Votre adresse e-mail *" required autocomplete="email">
+                    <span data-i18n="labelEmail">E-mail</span>
+                    <input type="email" name="email" data-i18n-placeholder="phEmail" placeholder="Votre e-mail" required autocomplete="email">
                 </label>
             </div>
             <label>
-                <span data-i18n="labelSubject">Sujet *</span>
-                <input type="text" name="subject" data-i18n-placeholder="phSubject" placeholder="Sujet *" required minlength="2">
+                <span data-i18n="labelMessage">Message</span>
+                <textarea name="message" rows="8" data-i18n-placeholder="phMessage" placeholder="Parlez-moi de votre projet" required minlength="10"></textarea>
             </label>
-            <label>
-                <span data-i18n="labelMessage">Message *</span>
-                <textarea name="message" rows="8" data-i18n-placeholder="phMessage" placeholder="Votre message *" required minlength="10"></textarea>
-            </label>
-            <button type="submit" class="btn-box" data-i18n="contactSend">Envoyer</button>
+            <button type="submit" class="btn-box" data-i18n="contactSend">Envoyer mon message</button>
         </form>
         <p class="form-status" id="form-status" hidden></p>
         <iframe name="formsubmit-frame" id="formsubmit-frame" title="Envoi du message" hidden></iframe>
@@ -214,6 +258,6 @@
         </div>
     </div>
 
-    <script src="app-2026.js?v=12"></script>
+    <script src="app-2026.js?v=14"></script>
 </body>
 </html>
