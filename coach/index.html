@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier Cap</title>
+    <meta name="description" content="Atelier Cap accompagne les indépendants pendant six semaines pour clarifier leur offre, écrire une page qui convertit et tenir un rythme de rendez-vous.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,560;7..72,650&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#accueil">Atelier Cap</a>
+        <a class="btn" href="#rendez-vous">Prendre rendez-vous</a>
+    </header>
+
+    <main id="accueil">
+        <section class="hero">
+            <p class="eyebrow">Coaching pour indépendants</p>
+            <h1>Clarifiez votre offre. Remplissez votre agenda.</h1>
+            <p class="lead">Six semaines pour dire clairement ce que vous vendez, poser la page qui prend les rendez-vous, et tenir un rythme que votre semaine peut absorber.</p>
+            <div class="hero-actions">
+                <a class="btn" href="#rendez-vous">Demander un rendez-vous</a>
+                <a class="text-link" href="#parcours">Voir le parcours</a>
+            </div>
+        </section>
+
+        <section class="offres" aria-label="Ce que nous clarifions">
+            <ol class="cards">
+                <li>
+                    <p class="card-index">01</p>
+                    <h2>Une offre nette</h2>
+                    <p>À qui vous parlez, ce que vous promettez, et le prix qui va avec, formulés sans détour.</p>
+                </li>
+                <li>
+                    <p class="card-index">02</p>
+                    <h2>Une page qui convertit</h2>
+                    <p>Une seule page qui explique l’offre et mène au rendez-vous, sans menu ni promesse floue.</p>
+                </li>
+                <li>
+                    <p class="card-index">03</p>
+                    <h2>Un rythme tenable</h2>
+                    <p>Un agenda que vous pouvez honorer : séances, suivi, et une semaine qui reste vivable.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="parcours" id="parcours">
+            <div class="section-head">
+                <h2>Le parcours</h2>
+                <p>Six semaines, trois temps. On avance dans l’ordre, sans sauter l’étape qui rend la suivante utile.</p>
+            </div>
+            <ol class="steps">
+                <li>
+                    <p class="step-when">Semaines 1–2</p>
+                    <h3>Cadrer</h3>
+                    <p>On pose le public, la promesse et ce qui distingue votre accompagnement de ce qui existe déjà.</p>
+                </li>
+                <li>
+                    <p class="step-when">Semaines 3–4</p>
+                    <h3>Formuler</h3>
+                    <p>On écrit l’offre, les prix et le texte de la page, puis on le relit comme le ferait un client.</p>
+                </li>
+                <li>
+                    <p class="step-when">Semaines 5–6</p>
+                    <h3>Lancer</h3>
+                    <p>La page est en ligne, les premiers rendez-vous sont ouverts, et le rythme de la semaine est calé.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="rendez-vous" id="rendez-vous">
+            <div class="section-head">
+                <h2>Prendre rendez-vous</h2>
+                <p>Dites ce que vous voulez clarifier. Je reviens vers vous pour fixer un créneau.</p>
+            </div>
+
+            <form id="coach-form" class="coach-form" novalidate>
+                <div class="fields">
+                    <label for="name">Nom
+                        <input id="name" name="name" type="text" autocomplete="name" required>
+                    </label>
+                    <label for="email">E-mail
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                    </label>
+                    <label for="goal">Objectif
+                        <select id="goal" name="goal" required>
+                            <option value="">Choisir un objectif</option>
+                            <option>Clarifier mon offre</option>
+                            <option>Fixer mes prix</option>
+                            <option>Trouver mes premiers clients</option>
+                            <option>Organiser mes semaines</option>
+                        </select>
+                    </label>
+                    <label for="message">Message
+                        <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Où en êtes-vous, et que voulez-vous clarifier ?"></textarea>
+                    </label>
+                </div>
+                <p id="form-error" class="error" role="alert" hidden></p>
+                <button class="btn" type="submit">Envoyer ma demande</button>
+            </form>
+
+            <div id="confirm" class="confirm" tabindex="-1" hidden>
+                <p class="confirm-title">Votre rendez-vous est noté.</p>
+                <p id="confirm-summary"></p>
+                <button class="btn" type="button" id="new-request">Nouvelle demande</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Atelier Cap</p>
+        <a href="../">Retour au portfolio</a>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
