@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Comptoir des Lilas</title>
+    <meta name="description" content="Réservez une table au Comptoir des Lilas, cuisine de saison à Lyon.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#accueil">Le Comptoir des Lilas</a>
+        <nav class="nav" aria-label="Navigation">
+            <a href="#carte">La carte</a>
+            <a href="#reserver">Réserver</a>
+        </nav>
+    </header>
+
+    <main id="accueil">
+        <section class="hero">
+            <p class="eyebrow">Cuisine de saison · Lyon</p>
+            <h1>Une table, ce soir, sans passer par le téléphone.</h1>
+            <p class="lead">Une salle courte, une carte qui change avec le marché, et une place gardée dès que vous confirmez. Déjeuner ou dîner, dites simplement pour qui.</p>
+            <a class="btn" href="#reserver">Réserver une table</a>
+        </section>
+
+        <section class="carte" id="carte">
+            <div class="section-head">
+                <h2>La carte</h2>
+                <p>Trois assiettes du moment, servies à la table.</p>
+            </div>
+            <ul class="menu">
+                <li>
+                    <div>
+                        <h3>Betterave rôtie, chèvre frais</h3>
+                        <p>Betteraves au four, chèvre frais et noisettes.</p>
+                    </div>
+                    <p class="price">14 €</p>
+                </li>
+                <li>
+                    <div>
+                        <h3>Poulet fermier, jus corsé</h3>
+                        <p>Suprême rôti, jus réduit et légumes de saison.</p>
+                    </div>
+                    <p class="price">26 €</p>
+                </li>
+                <li>
+                    <div>
+                        <h3>Tarte citron, meringue</h3>
+                        <p>Citron pressé du jour et meringue légère.</p>
+                    </div>
+                    <p class="price">11 €</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="reserver" id="reserver">
+            <div class="section-head">
+                <h2>Réserver</h2>
+                <p>Fermé le lundi. Déjeuner de 12 h à 14 h, dîner de 19 h à 22 h.</p>
+            </div>
+
+            <form id="reserve-form" class="reserve-form" novalidate>
+                <div class="fields">
+                    <label for="name">Nom
+                        <input id="name" name="name" type="text" autocomplete="name" required>
+                    </label>
+                    <div class="pair">
+                        <label for="email">E-mail
+                            <input id="email" name="email" type="email" autocomplete="email" required>
+                        </label>
+                        <label for="phone">Téléphone
+                            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+                        </label>
+                    </div>
+                    <div class="pair">
+                        <label for="date">Date
+                            <input id="date" name="date" type="date" required>
+                        </label>
+                        <label for="time">Heure
+                            <select id="time" name="time" required>
+                                <option value="">Choisir un horaire</option>
+                                <option value="12:00">12:00</option>
+                                <option value="12:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="19:00">19:00</option>
+                                <option value="19:30">19:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                                <option value="21:30">21:30</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label for="guests">Couverts
+                        <select id="guests" name="guests" required>
+                            <option value="">Nombre de couverts</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </label>
+                    <label for="note">Note
+                        <textarea id="note" name="note" rows="4" placeholder="Allergies, occasion, arrivée plus tard…"></textarea>
+                    </label>
+                </div>
+                <p id="form-error" class="error" role="alert" hidden></p>
+                <button class="btn" type="submit">Confirmer la réservation</button>
+            </form>
+
+            <div id="confirm" class="confirm" hidden>
+                <p class="confirm-title">Votre table est réservée</p>
+                <p id="confirm-summary"></p>
+                <button class="btn" type="button" id="new-reservation">Nouvelle réservation</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Le Comptoir des Lilas · Lyon</p>
+        <a href="../">Retour au portfolio</a>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
