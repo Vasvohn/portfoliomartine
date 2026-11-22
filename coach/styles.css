@@ -307,3 +307,8 @@ textarea {
         width: auto;
     }
 }
+
+.license {
+    margin-top: 6px;
+    font-size: 0.85rem;
+}
