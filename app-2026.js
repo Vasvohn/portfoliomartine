@@ -45,39 +45,44 @@ const translations = {
         homeAnd: "Et je suis",
         homeIntro: "J’aide les indépendants et petites entreprises à développer leur activité grâce à des sites internet modernes, rapides et sur-mesure.",
         homeMore: "Discutons de votre projet",
-        photoAlt: "Portrait d'Asiata Martine",
+        photoAlt: "Portrait de Martine .A",
         aboutTitle: "À propos de <span>moi</span>",
-        aboutRole: "Développeuse fullstack & web designer",
+        aboutRole: "Martine .A · développeuse web junior",
         aboutP1: "J’ai travaillé dans le secteur de la santé depuis 2018. En 2023, je me suis orientée vers le développement web. J’ai participé à la piscine de Zone01 en février et mars 2023, une expérience intensive qui a confirmé mon choix de reconversion.",
-        aboutP2: "Aujourd’hui, je suis autoentrepreneur. J’accompagne mes clients sur le front-end, le back-end et le design d’interfaces, avec une approche claire, soignée et centrée sur l’utilisateur.",
+        aboutP2: "Aujourd’hui, je suis autoentrepreneur. Je réalise des sites vitrines, des landing pages et l’intégration front-end d’applications web, avec une approche claire et soignée.",
         aboutCta: "Me contacter",
         skillsTitle: "Mes <span>compétences</span>",
         servicesTitle: "Mes <span>services</span>",
-        svcFullTitle: "Développeuse fullstack",
-        svcFullText: "Conception et réalisation d’applications web de bout en bout, de l’interface à la base de données.",
-        svcFrontTitle: "Front-end",
-        svcFrontText: "Interfaces responsives, accessibles et modernes avec HTML, CSS, JavaScript, Bootstrap et Angular.",
-        svcBackTitle: "Back-end",
-        svcBackText: "Logique métier, API et bases de données avec PHP/MySQL et Python, pour des sites fiables et maintenables.",
-        svcDesignTitle: "Web designer",
-        svcDesignText: "Identité visuelle, mise en page et expérience utilisateur pour un site clair, professionnel et mémorable.",
+        svcFullTitle: "Sites vitrines",
+        svcFullText: "Un site clair pour présenter une activité, montrer des réalisations et recevoir des demandes de devis.",
+        svcFrontTitle: "Landing pages",
+        svcFrontText: "Une page qui explique une offre et transforme les visites en demandes de contact ou de rendez-vous.",
+        svcBackTitle: "Intégration front-end",
+        svcBackText: "Mise en page soignée et responsive, en HTML, CSS et JavaScript, à partir d’une maquette ou d’un contenu existant.",
+        svcDesignTitle: "Applications web",
+        svcDesignText: "Interfaces d’applications, avec React, Next.js ou Tailwind CSS lorsque le projet le demande.",
         projectsTitle: "Mes <span>projets</span>",
         projectEcoKind: "Application",
         projectEcoNeed: "Application anti-gaspillage : suivre le frigo et les placards, proposer des recettes à partir de ce qui est déjà à la maison, planifier les menus de la semaine et estimer les économies.",
+        projectEcoRole: "Intégration de l’application · HTML, CSS, JavaScript, Tailwind CSS",
         projectAeroKind: "Comparateur de vols",
         projectAeroNeed: "Recherche d’un trajet, comparaison des tarifs, puis réservation du billet chez le partenaire. Le prix affiché est celui du partenaire, sans frais cachés sur Aeromeld.",
+        projectAeroRole: "Interface de comparaison · Next.js, React",
         projectMore: "Voir le projet",
         project1Kind: "Site vitrine",
         project1Title: "Artisan paysagiste",
         project1Need: "Être trouvé localement et montrer ses réalisations pour recevoir des demandes de devis, sans dépendre uniquement du bouche-à-oreille.",
+        project1Role: "Conception et intégration du site · HTML, CSS, JavaScript",
         project1Tech: "HTML · CSS · JavaScript",
         project2Kind: "Réservation",
         project2Title: "Restaurant",
         project2Need: "Présenter la carte et permettre de réserver une table en ligne, sans que chaque demande passe par un appel téléphonique.",
+        project2Role: "Page de réservation livrée · HTML, CSS, JavaScript",
         project2Tech: "HTML · CSS · JavaScript",
         project3Kind: "Landing page",
         project3Title: "Coach",
         project3Need: "Expliquer une offre en une page claire et transformer les visites en demandes de rendez-vous.",
+        project3Role: "Landing page livrée · HTML, CSS, JavaScript",
         project3Tech: "HTML · CSS · JavaScript",
         projectView: "Voir le projet",
         pathTitle: "Mon <span>parcours</span>",
@@ -111,7 +116,7 @@ const translations = {
         cookieRefuse: "Refuser",
         cookieAria: "Bandeau cookies",
         backTop: "Retour en haut",
-        pageDesc: "Martine conçoit des sites internet modernes, rapides et sur-mesure pour les indépendants et les petites entreprises.",
+        pageDesc: "Martine .A, développeuse web junior, conçoit des sites vitrines, des landing pages et des applications web pour les indépendants et les petites entreprises.",
         typed: ["Développeuse Front-end", "Développeuse Back-end", "Développeuse Fullstack", "Web Designer"]
     },
     en: {
@@ -125,39 +130,44 @@ const translations = {
         homeAnd: "And I am a",
         homeIntro: "I help freelancers and small businesses grow their activity with modern, fast, custom-made websites.",
         homeMore: "Let's talk about your project",
-        photoAlt: "Portrait of Asiata Martine",
+        photoAlt: "Portrait of Martine .A",
         aboutTitle: "About <span>me</span>",
-        aboutRole: "Full-stack developer & web designer",
+        aboutRole: "Martine .A · junior web developer",
         aboutP1: "I worked in healthcare from 2018. In 2023, I moved into web development. I took part in the Zone01 piscine in February and March 2023, an intensive experience that confirmed my career change.",
-        aboutP2: "Today I work as a self-employed professional. I support clients on front-end, back-end and interface design, with a clear, careful and user-centered approach.",
+        aboutP2: "Today I am self-employed. I build brochure sites, landing pages and the front-end of web applications, with a clear and careful approach.",
         aboutCta: "Contact me",
         skillsTitle: "My <span>skills</span>",
         servicesTitle: "My <span>services</span>",
-        svcFullTitle: "Full-stack developer",
-        svcFullText: "Design and delivery of web applications from end to end, from the interface to the database.",
-        svcFrontTitle: "Front-end",
-        svcFrontText: "Responsive, accessible and modern interfaces with HTML, CSS, JavaScript, Bootstrap and Angular.",
-        svcBackTitle: "Back-end",
-        svcBackText: "Business logic, APIs and databases with PHP/MySQL and Python, for reliable and maintainable websites.",
-        svcDesignTitle: "Web designer",
-        svcDesignText: "Visual identity, layout and user experience for a clear, professional and memorable website.",
+        svcFullTitle: "Brochure sites",
+        svcFullText: "A clear site to present a business, show the work and receive quote requests.",
+        svcFrontTitle: "Landing pages",
+        svcFrontText: "One page that explains an offer and turns visits into contact or appointment requests.",
+        svcBackTitle: "Front-end integration",
+        svcBackText: "Careful, responsive layout in HTML, CSS and JavaScript, from a design or existing content.",
+        svcDesignTitle: "Web applications",
+        svcDesignText: "Application interfaces, with React, Next.js or Tailwind CSS when the project needs them.",
         projectsTitle: "My <span>projects</span>",
         projectEcoKind: "Application",
         projectEcoNeed: "An anti-waste app: track the fridge and cupboards, suggest recipes from what is already at home, plan the week’s menus and estimate the savings.",
+        projectEcoRole: "Front-end build of the app · HTML, CSS, JavaScript, Tailwind CSS",
         projectAeroKind: "Flight comparison",
         projectAeroNeed: "Search a route, compare fares, then book the ticket with the partner. The price shown is the partner’s price, with no hidden fees on Aeromeld.",
+        projectAeroRole: "Comparison interface · Next.js, React",
         projectMore: "View the project",
         project1Kind: "Showcase website",
         project1Title: "Landscape gardener",
         project1Need: "Be found locally and show completed work to receive quote requests, without relying only on word of mouth.",
+        project1Role: "Site design and front-end build · HTML, CSS, JavaScript",
         project1Tech: "HTML · CSS · JavaScript",
         project2Kind: "Reservation",
         project2Title: "Restaurant",
         project2Need: "Present the menu and allow a table to be booked online, without every request going through a phone call.",
+        project2Role: "Booking page delivered · HTML, CSS, JavaScript",
         project2Tech: "HTML · CSS · JavaScript",
         project3Kind: "Landing page",
         project3Title: "Coach",
         project3Need: "Explain an offer on one clear page and turn visits into appointment requests.",
+        project3Role: "Landing page delivered · HTML, CSS, JavaScript",
         project3Tech: "HTML · CSS · JavaScript",
         projectView: "View the project",
         pathTitle: "My <span>journey</span>",
@@ -191,7 +201,7 @@ const translations = {
         cookieRefuse: "Refuse",
         cookieAria: "Cookie banner",
         backTop: "Back to top",
-        pageDesc: "Martine designs modern, fast, custom-made websites for freelancers and small businesses.",
+        pageDesc: "Martine .A, a junior web developer, builds brochure sites, landing pages and web applications for freelancers and small businesses.",
         typed: ["Front-end Developer", "Back-end Developer", "Full-stack Developer", "Web Designer"]
     }
 };
@@ -205,6 +215,10 @@ function startTyped(lang) {
     }
     if (typed) {
         typed.destroy();
+        typed = null;
+    }
+    if (typeof Typed !== "function") {
+        return;
     }
     typed = new Typed(".text", {
         strings: translations[lang].typed,
@@ -319,13 +333,16 @@ const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 
 function showThanks() {
-    form.hidden = true;
-    form.setAttribute("aria-hidden", "true");
     status.hidden = false;
     status.removeAttribute("hidden");
     status.classList.remove("is-error");
     status.classList.add("is-thanks");
     status.textContent = translations[currentLang].contactStatus;
+    form.reset();
+    const subject = document.getElementById("mail-subject");
+    if (subject) {
+        subject.value = "Message depuis le portfolio";
+    }
 }
 
 form.addEventListener("submit", (event) => {
@@ -357,12 +374,11 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    sessionStorage.setItem("contact-sent", "1");
     form.submit();
     showThanks();
 });
 
-if (sessionStorage.getItem("contact-sent") === "1" || new URLSearchParams(window.location.search).get("sent") === "1") {
+if (new URLSearchParams(window.location.search).get("sent") === "1") {
     showThanks();
 }
 
